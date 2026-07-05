@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Резюме — Дробышев Денис</title>
+<style>
+  :root{
+    --ink:#1f2933; --muted:#566;  --accent:#2563a8; --accent2:#3a4a7a;
+    --line:#e3e8ef; --chip:#eef2f7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",-apple-system,Roboto,Arial,sans-serif;color:var(--ink);
+       background:#f4f6fa;line-height:1.5;font-size:14px}
+  .page{max-width:820px;margin:24px auto;background:#fff;
+        box-shadow:0 6px 30px rgba(20,40,80,.10);border-radius:8px;overflow:hidden}
+  header{background:var(--accent2);color:#fff;padding:26px 40px}
+  header h1{font-size:27px;letter-spacing:.2px;font-weight:700}
+  header .role{font-size:15px;font-weight:500;opacity:.92;margin-top:3px}
+  header .contacts{margin-top:13px;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px}
+  header .contacts a{color:#fff;text-decoration:none;opacity:.95}
+  header .contacts span{opacity:.9}
+  .body{padding:24px 40px 36px}
+  section{margin-bottom:20px}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent);
+     border-bottom:1.5px solid var(--line);padding-bottom:5px;margin-bottom:11px}
+  .summary{color:#3a4452}
+  .job{margin-bottom:13px}
+  .job .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:3px}
+  .job .title{font-weight:700}
+  .job .org{color:var(--accent);font-weight:600}
+  .job .date{color:var(--muted);font-size:12.5px;white-space:nowrap}
+  .job .sub{color:var(--muted);font-size:12.5px;margin:2px 0 6px}
+  ul{list-style:none;padding-left:0}
+  li{position:relative;padding-left:15px;margin:4px 0}
+  li::before{content:"•";position:absolute;left:2px;color:var(--accent)}
+  .stack{font-size:12px;color:var(--muted);margin-top:5px}
+  .skillgrid{display:grid;grid-template-columns:140px 1fr;gap:6px 14px}
+  .skillgrid .k{font-weight:600}
+  .skillgrid .v{color:#3a4452}
+  .tag{display:inline-block;background:var(--chip);color:#33455c;
+       padding:2px 9px;border-radius:4px;font-size:11.5px;margin-left:6px;font-weight:600;vertical-align:middle}
+  a{color:var(--accent)}
+  @media print{
+    body{background:#fff;font-size:12px}
+    .page{box-shadow:none;margin:0;max-width:100%;border-radius:0}
+    header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .tag{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    section{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Дробышев Денис Олегович</h1>
+    <div class="role">Backend-разработчик (Python) · ML / Computer Vision</div>
+    <div class="contacts">
+      <span>Москва · удалёнка или гибрид</span>
+      <a href="mailto:drobishev.denis@icloud.com">drobishev.denis@icloud.com</a>
+      <a href="https://t.me/multiheadselfattention">Telegram @multiheadselfattention</a>
+      <a href="https://github.com/DenisDrobyshev">github.com/DenisDrobyshev</a>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <section>
+      <h2>О себе</h2>
+      <p class="summary">
+        Пишу бэкенд на Python: Django и FastAPI, PostgreSQL, Docker. Дипломный проект, портал
+        научного журнала, не просто написал, а сам выкатил на рабочий сервер в ИТ-дирекции
+        университета: поднял PostgreSQL, Nginx и Gunicorn, подключил вход через корпоративный SSO.
+        Кроме веба делал ML и computer-vision проекты: детекция на видеопотоке (YOLO), классификаторы
+        изображений, геоаналитика на открытых данных. Ищу первую постоянную работу в бэкенде, где
+        смогу писать код каждый день и быстро вырасти.
+      </p>
+    </section>
+
+    <section>
+      <h2>Навыки</h2>
+      <div class="skillgrid">
+        <div class="k">Языки</div>      <div class="v">Python, JavaScript, SQL, Java, Dart</div>
+        <div class="k">Бэкенд</div>     <div class="v">Django, FastAPI, REST, аутентификация, SSO (OpenID Connect)</div>
+        <div class="k">Базы данных</div><div class="v">PostgreSQL, SQLite, ORM, проектирование схем</div>
+        <div class="k">Инфраструктура</div><div class="v">Docker, docker-compose, Nginx, Gunicorn, Linux, Git, PowerShell, Bash, Active Directory</div>
+        <div class="k">ML и CV</div>    <div class="v">PyTorch, TensorFlow, scikit-learn, OpenCV, YOLO, pandas, NumPy</div>
+        <div class="k">Фронтенд</div>   <div class="v">React, Vue / Nuxt, HTML, CSS, Streamlit</div>
+        <div class="k">Прочее</div>     <div class="v">тестирование (unit, интеграционное, функциональное), основы веб-безопасности (CSRF, XSS, SQL-инъекции)</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Опыт</h2>
+      <div class="job">
+        <div class="top">
+          <div><span class="title">Разработчик / DevOps</span>,
+               <span class="org">Дирекция информационных технологий МИИГАиК</span></div>
+          <div class="date">2026</div>
+        </div>
+        <div class="sub">Группа разработки и сопровождения автоматизированных систем · производственная практика</div>
+        <ul>
+          <li>Выкатил Django-портал во внутреннюю инфраструктуру вуза: PostgreSQL, Gunicorn за Nginx, раздача статики и медиафайлов.</li>
+          <li>Подключил единый вход через корпоративный аккаунт МИИГАиК по протоколу OpenID Connect.</li>
+          <li>Перевёл проект из dev в прод: вынес секреты, выключил debug, ограничил разрешённые хосты, настроил отправку системных писем.</li>
+          <li>Залил в архив реальные выпуски журнала и проверил выгрузку метаданных в XML.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="top">
+          <div><span class="title">Техник технической поддержки (младший)</span>,
+               <span class="org">Управление информатизации, ДИТ МИИГАиК</span></div>
+          <div class="date">дек 2024 — янв 2026</div>
+        </div>
+        <div class="sub">Служба технической поддержки · 1 год 2 месяца</div>
+        <ul>
+          <li>Администрировал рабочие станции и серверы на Windows и Linux в домене Active Directory.</li>
+          <li>Писал скрипты автоматизации на PowerShell и Bash для рутинных задач поддержки.</li>
+          <li>Держал технику в рабочем состоянии: диагностика, ремонт, замена комплектующих, установка и настройка ПО и драйверов.</li>
+          <li>Настраивал рабочие места, проводил плановые осмотры оборудования, консультировал пользователей по ИТ.</li>
+          <li>Сопровождал мероприятия с техникой: ПК, ноутбуки, проекторы, интерактивные панели, принтеры, LED-экраны.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="top">
+          <div><span class="title">Backend / веб-разработчик</span>,
+               <span class="org">внутренние системы МИИГАиК</span></div>
+          <div class="date">2023 — 2024</div>
+        </div>
+        <div class="sub">Практическая работа над вузовскими сервисами во время учёбы</div>
+        <ul>
+          <li>Сделал веб-сервис расписания занятий: написал большой SQL-запрос, собиравший расписание из нескольких связанных таблиц, и интегрировал его во внутренние Go-сервисы вуза.</li>
+          <li>Разработал личный кабинет студента: расписание, зачётка, профиль и новости, с адаптивным интерфейсом (miigaik-lk).</li>
+          <li>Работал внутри существующей инфраструктуры: читал чужой код, держался общих соглашений, доводил изменения до рабочего состояния.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Проекты</h2>
+
+      <div class="job">
+        <div class="top">
+          <div><span class="title">Портал научного журнала</span><span class="tag">дипломная работа</span></div>
+        </div>
+        <div class="sub">«Известия вузов. Геодезия и аэрофотосъёмка» — портал с управлением архивом выпусков</div>
+        <ul>
+          <li>Спроектировал базу и серверную часть, собрал портал целиком и развернул его на сервере вуза.</li>
+          <li>Сделал админ-панель для редакции: выпуски, статьи, вложенные формы. Заложил правило «не больше одного текущего выпуска одновременно».</li>
+          <li>Прикрутил вход по корпоративному SSO, личный кабинет и доступ по ролям. Закрыл типовые веб-уязвимости (CSRF, XSS, SQL-инъекции).</li>
+          <li>Добавил выгрузку метаданных в XML для библиографических баз. Покрыл систему тестами разных уровней.</li>
+        </ul>
+        <div class="stack">Python · Django · PostgreSQL · Docker · Nginx · Gunicorn · OpenID Connect</div>
+      </div>
+
+      <div class="job">
+        <div class="top"><div><span class="title">Detector_app — детекция на видеопотоке</span></div></div>
+        <ul>
+          <li>Приложение на Streamlit находит события в кадре в реальном времени: YOLO для детекции, InsightFace для распознавания лиц.</li>
+          <li>Работает с веб-камерой и видеофайлами, собирает CSV-отчёты и статистику.</li>
+        </ul>
+        <div class="stack">Python · YOLO · InsightFace · OpenCV · Streamlit</div>
+      </div>
+
+      <div class="job">
+        <div class="top"><div><span class="title">Geomarketing_analysis — выбор локации по геоданным</span></div></div>
+        <ul>
+          <li>Пайплайн, который подсказывает, где открыть фитнес-центр: данные из OpenStreetMap, гексагональная сетка H3, модель привлекательности на scikit-learn и интерактивные карты.</li>
+        </ul>
+        <div class="stack">Python · scikit-learn · H3 · OSMnx · geopandas</div>
+      </div>
+
+      <div class="job">
+        <div class="top"><div><span class="title">classification_animals — классификатор изображений</span></div></div>
+        <ul>
+          <li>Сравнил три архитектуры (Dense, простая CNN, VGG-подобная). Лучшая дала F1 0.88. Завернул инференс в FastAPI и интерфейс на Streamlit.</li>
+        </ul>
+        <div class="stack">Python · TensorFlow / Keras · CNN · FastAPI · Streamlit</div>
+      </div>
+
+      <div class="job">
+        <div class="top"><div><span class="title">excel-to-db-converter — бэкенд на FastAPI</span></div></div>
+        <ul>
+          <li>Превращает Excel-файлы в таблицы базы данных: авторизация, настраиваемые шаблоны, валидация по типам и правилам, веб-интерфейс для правок.</li>
+        </ul>
+        <div class="stack">Python · FastAPI · Uvicorn · SQLite</div>
+      </div>
+      <p class="stack">Остальные проекты: github.com/DenisDrobyshev</p>
+    </section>
+
+    <section>
+      <h2>Образование</h2>
+      <div class="job">
+        <div class="top">
+          <div><span class="title">Бакалавр, «Прикладная информатика» (09.03.03)</span>,
+               <span class="org">МИИГАиК</span></div>
+          <div class="date">2022 — 2026</div>
+        </div>
+        <div class="sub">Московский государственный университет геодезии и картографии. Факультет геоинформатики и информационной безопасности</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Дополнительное образование</h2>
+      <div class="job">
+        <div class="top">
+          <div><span class="title">Разработка геоинформационных решений с использованием методов ИИ</span></div>
+          <div class="date">дек 2024 — дек 2025</div>
+        </div>
+        <div class="sub">Цифровая кафедра МИИГАиК · квалификация «Специалист по большим данным»</div>
+        <ul>
+          <li>Машинное обучение на Python: работа с данными (NumPy, pandas), визуализация (Matplotlib, Plotly), сбор и предобработка датасетов, инженерия признаков, метрики качества, кросс-валидация, подбор гиперпараметров.</li>
+          <li>Алгоритмы ML: kNN, линейная и логистическая регрессия, деревья решений, SVM, наивный Байес, кластеризация, снижение размерности, ансамбли и бустинг.</li>
+          <li>Глубокое обучение: нейросети и практика в Keras, CNN, transfer learning, регуляризация, автоэнкодеры, GAN, YOLO для детекции.</li>
+          <li>GeoAI: пространственные данные в Python (GeoPandas, Rasterio, Xarray), сбор через API (requests, OSMnx), интерактивные карты (Leafmap), Google Earth Engine, интеграция ML-моделей в QGIS и развёртывание через Streamlit.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Дополнительно</h2>
+      <ul>
+        <li>Английский: читаю документацию и техническую литературу.</li>
+        <li>Готов выйти на работу сразу. Москва, удалёнка или гибрид.</li>
+      </ul>
+    </section>
+
+  </div>
+</div>
+</body>
+</html>

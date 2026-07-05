@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Denis Drobyshev - Resume</title>
+<style>
+  :root{
+    --ink:#1f2933; --muted:#566; --accent:#2563a8; --accent2:#3a4a7a;
+    --line:#e3e8ef; --chip:#eef2f7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",-apple-system,Roboto,Arial,sans-serif;color:var(--ink);
+       background:#f4f6fa;line-height:1.5;font-size:14px}
+  .page{max-width:820px;margin:24px auto;background:#fff;
+        box-shadow:0 6px 30px rgba(20,40,80,.10);border-radius:8px;overflow:hidden}
+  header{background:var(--accent2);color:#fff;padding:26px 40px}
+  header h1{font-size:27px;letter-spacing:.2px;font-weight:700}
+  header .role{font-size:15px;font-weight:500;opacity:.92;margin-top:3px}
+  header .contacts{margin-top:13px;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px}
+  header .contacts a{color:#fff;text-decoration:none;opacity:.95}
+  header .contacts span{opacity:.9}
+  .body{padding:24px 40px 36px}
+  section{margin-bottom:20px}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent);
+     border-bottom:1.5px solid var(--line);padding-bottom:5px;margin-bottom:11px}
+  .summary{color:#3a4452}
+  .job{margin-bottom:13px}
+  .job .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:3px}
+  .job .title{font-weight:700}
+  .job .org{color:var(--accent);font-weight:600}
+  .job .date{color:var(--muted);font-size:12.5px;white-space:nowrap}
+  .job .sub{color:var(--muted);font-size:12.5px;margin:2px 0 6px}
+  ul{list-style:none;padding-left:0}
+  li{position:relative;padding-left:15px;margin:4px 0}
+  li::before{content:"•";position:absolute;left:2px;color:var(--accent)}
+  .stack{font-size:12px;color:var(--muted);margin-top:5px}
+  .skillgrid{display:grid;grid-template-columns:140px 1fr;gap:6px 14px}
+  .skillgrid .k{font-weight:600}
+  .skillgrid .v{color:#3a4452}
+  .tag{display:inline-block;background:var(--chip);color:#33455c;
+       padding:2px 9px;border-radius:4px;font-size:11.5px;margin-left:6px;font-weight:600;vertical-align:middle}
+  a{color:var(--accent)}
+  @media print{
+    body{background:#fff;font-size:12px}
+    .page{box-shadow:none;margin:0;max-width:100%;border-radius:0}
+    header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .tag{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    section{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Denis Drobyshev</h1>
+    <div class="role">Backend Developer (Python) · ML / Computer Vision</div>
+    <div class="contacts">
+      <span>Moscow · remote or hybrid</span>
+      <a href="mailto:drobishev.denis@icloud.com">drobishev.denis@icloud.com</a>
+      <a href="https://t.me/multiheadselfattention">Telegram @multiheadselfattention</a>
+      <a href="https://github.com/DenisDrobyshev">github.com/DenisDrobyshev</a>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <section>
+      <h2>About</h2>
+      <p class="summary">
+        Backend developer working mainly in Python with Django and FastAPI, PostgreSQL and Docker.
+        For my thesis I built a web portal for an academic journal and then deployed it myself on a
+        university server: PostgreSQL, Nginx, Gunicorn, and login through the university's corporate
+        SSO. Besides web work I have built machine learning and computer vision projects, including
+        real time detection on video with YOLO, image classifiers, and a geospatial analysis
+        pipeline. I am looking for my first full time backend role where I can write code every day
+        and grow fast.
+      </p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skillgrid">
+        <div class="k">Languages</div>     <div class="v">Python, JavaScript, SQL, Java, Dart</div>
+        <div class="k">Backend</div>       <div class="v">Django, FastAPI, REST, authentication, SSO (OpenID Connect)</div>
+        <div class="k">Databases</div>     <div class="v">PostgreSQL, SQLite, ORM, schema design</div>
+        <div class="k">Infrastructure</div><div class="v">Docker, docker-compose, Nginx, Gunicorn, Linux, Git</div>
+        <div class="k">ML and CV</div>     <div class="v">PyTorch, TensorFlow, scikit-learn, OpenCV, YOLO, pandas, NumPy</div>
+        <div class="k">Frontend</div>      <div class="v">React, Vue / Nuxt, HTML, CSS, Streamlit</div>
+        <div class="k">Other</div>         <div class="v">testing (unit, integration, functional), web security basics (CSRF, XSS, SQL injection)</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="job">
+        <div class="top">
+          <div><span class="title">Developer / DevOps</span>,
+               <span class="org">IT Department, MIIGAiK (Moscow State University of Geodesy and Cartography)</span></div>
+          <div class="date">2026</div>
+        </div>
+        <div class="sub">Systems development and support group · production internship</div>
+        <ul>
+          <li>Deployed a Django portal on the university's internal infrastructure: PostgreSQL, Gunicorn behind Nginx, static and media file serving.</li>
+          <li>Set up single sign-on with the university corporate account over OpenID Connect.</li>
+          <li>Moved the project from dev to production: pulled secrets out of the code, turned off debug, restricted allowed hosts, configured system email.</li>
+          <li>Loaded real journal issues into the archive and verified metadata export to XML.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="top">
+          <div><span class="title">Backend / Web Developer</span>,
+               <span class="org">internal university systems, MIIGAiK</span></div>
+          <div class="date">2023 - 2024</div>
+        </div>
+        <div class="sub">Practical work on internal services during my studies</div>
+        <ul>
+          <li>Built a class schedule web service: wrote a large SQL query that assembled the timetable from several related tables, and integrated it into the university's internal Go (Golang) services.</li>
+          <li>Developed the student personal account portal: schedule, grade book, profile and news, with a responsive interface (miigaik-lk).</li>
+          <li>Worked inside an existing infrastructure: read other people's code, kept to shared conventions, and got changes to a working state.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <div class="job">
+        <div class="top">
+          <div><span class="title">Academic journal portal</span><span class="tag">thesis</span></div>
+        </div>
+        <div class="sub">Portal for the journal "Izvestia Vuzov. Geodesy and Aerophotography" with issue archive management</div>
+        <ul>
+          <li>Designed the database and the server side, built the whole portal, and deployed it on a university server.</li>
+          <li>Built an admin panel for the editorial team: issues, articles, inline forms. Enforced a rule that only one issue can be current at a time.</li>
+          <li>Added corporate SSO login, a personal account, and role based access. Closed common web vulnerabilities (CSRF, XSS, SQL injection).</li>
+          <li>Added metadata export to XML for bibliographic databases. Covered the system with tests at several levels.</li>
+        </ul>
+        <div class="stack">Python · Django · PostgreSQL · Docker · Nginx · Gunicorn · OpenID Connect</div>
+      </div>
+
+      <div class="job">
+        <div class="top"><div><span class="title">Detector_app, detection on video</span></div></div>
+        <ul>
+          <li>A Streamlit app that finds events in the frame in real time: YOLO for detection, InsightFace for face recognition.</li>
+          <li>Works with a webcam and video files, produces CSV reports and statistics.</li>
+        </ul>
+        <div class="stack">Python · YOLO · InsightFace · OpenCV · Streamlit</div>
+      </div>
+
+      <div class="job">
+        <div class="top"><div><span class="title">Geomarketing_analysis, location choice from geodata</span></div></div>
+        <ul>
+          <li>A pipeline that suggests where to open a fitness center: data from OpenStreetMap, an H3 hex grid, an attractiveness model in scikit-learn, and interactive maps.</li>
+        </ul>
+        <div class="stack">Python · scikit-learn · H3 · OSMnx · geopandas</div>
+      </div>
+
+      <div class="job">
+        <div class="top"><div><span class="title">classification_animals, image classifier</span></div></div>
+        <ul>
+          <li>Compared three architectures (dense, a simple CNN, a VGG style net). The best one reached F1 0.88. Served inference through FastAPI with a Streamlit interface.</li>
+        </ul>
+        <div class="stack">Python · TensorFlow / Keras · CNN · FastAPI · Streamlit</div>
+      </div>
+
+      <div class="job">
+        <div class="top"><div><span class="title">excel-to-db-converter, FastAPI backend</span></div></div>
+        <ul>
+          <li>Turns Excel files into database tables: authentication, configurable templates, validation by type and rules, and a web interface for edits.</li>
+        </ul>
+        <div class="stack">Python · FastAPI · Uvicorn · SQLite</div>
+      </div>
+      <p class="stack">More projects: github.com/DenisDrobyshev</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="job">
+        <div class="top">
+          <div><span class="title">B.Sc., Applied Informatics (09.03.03)</span>,
+               <span class="org">MIIGAiK</span></div>
+          <div class="date">2022 - 2026</div>
+        </div>
+        <div class="sub">Moscow State University of Geodesy and Cartography. Faculty of Geoinformatics and Information Security</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Additional</h2>
+      <ul>
+        <li>English: I read documentation and technical material comfortably.</li>
+        <li>Available to start now. Moscow, remote or hybrid.</li>
+      </ul>
+    </section>
+
+  </div>
+</div>
+</body>
+</html>
