@@ -175,6 +175,21 @@
     <section id="projects" class="section">
       <h2 class="section-title"><span class="num">03</span> Проекты</h2>
 
+      <article class="showcase reveal">
+        <span class="showcase-label">Главный проект · дипломная работа</span>
+        <h3>GiA — портал научного журнала</h3>
+        <p>
+          Информационный портал «Известия вузов. Геодезия и аэрофотосъёмка» с управлением
+          архивами выпусков: автогенерируемая админка, SSO / OpenID Connect, защита от
+          CSRF/XSS/SQLi, выгрузка метаданных в XML, тестирование по пирамиде.
+          Развёрнут на тестовом сервере ДИТ МИИГАиК (PostgreSQL, Gunicorn, Nginx).
+        </p>
+        <ul class="tags">
+          <li>Django</li><li>PostgreSQL</li><li>Docker</li><li>Nginx</li><li>Gunicorn</li><li>OIDC</li>
+        </ul>
+        <span class="proj-note">приватный репозиторий</span>
+      </article>
+
       <div class="filters" role="tablist" aria-label="Фильтр проектов">
         <button class="filter is-active" data-filter="all" type="button">Все</button>
         <button class="filter" data-filter="backend" type="button">Backend</button>
@@ -191,12 +206,6 @@
           <p>Экосистема из 5 модулей (фитнес, библиотека, мессенджер, соцсеть, знакомства) на общем ядре: JWT-авторизация, realtime-мессенджер на WebSocket, медиа в S3, Pro-подписка и рефералы, CI и деплой.</p>
           <div class="proj-tags">React · TypeScript · NestJS · PostgreSQL · Redis · Docker</div>
           <span class="proj-note">приватный репозиторий</span>
-        </div>
-        <div class="proj proj--static" data-cat="backend">
-          <h3>GiA — портал научного журнала</h3>
-          <p>Информационный портал «Известия вузов. Геодезия и аэрофотосъёмка»: автогенерируемая админка, SSO / OpenID Connect, защита от CSRF/XSS/SQLi, экспорт метаданных в XML. Развёрнут на реальном сервере.</p>
-          <div class="proj-tags">Django · PostgreSQL · Docker · Nginx · Gunicorn</div>
-          <span class="proj-note">дипломная работа · приватный репозиторий</span>
         </div>
         <a class="proj" data-cat="ml" href="https://denisdrobyshev.github.io/reinforce/" target="_blank" rel="noopener">
           <h3>reinforce</h3>

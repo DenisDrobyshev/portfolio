@@ -174,6 +174,21 @@
     <section id="projects" class="section">
       <h2 class="section-title"><span class="num">03</span> Projects</h2>
 
+      <article class="showcase reveal">
+        <span class="showcase-label">Flagship project · thesis work</span>
+        <h3>GiA — academic journal portal</h3>
+        <p>
+          An information portal for “Izvestia vuzov. Geodesy and Aerophotography” with
+          issue-archive management: an auto-generated admin panel, SSO / OpenID Connect,
+          protection against CSRF/XSS/SQLi, XML metadata export, pyramid testing.
+          Deployed to the MIIGAiK IT Department test server (PostgreSQL, Gunicorn, Nginx).
+        </p>
+        <ul class="tags">
+          <li>Django</li><li>PostgreSQL</li><li>Docker</li><li>Nginx</li><li>Gunicorn</li><li>OIDC</li>
+        </ul>
+        <span class="proj-note">private repository</span>
+      </article>
+
       <div class="filters" role="tablist" aria-label="Project filter">
         <button class="filter is-active" data-filter="all" type="button">All</button>
         <button class="filter" data-filter="backend" type="button">Backend</button>
@@ -190,12 +205,6 @@
           <p>A 5-module ecosystem (fitness, library, messenger, social feed, dating) on a shared core: JWT auth, a realtime WebSocket messenger, media in S3, a Pro subscription and referrals, CI and deployment.</p>
           <div class="proj-tags">React · TypeScript · NestJS · PostgreSQL · Redis · Docker</div>
           <span class="proj-note">private repository</span>
-        </div>
-        <div class="proj proj--static" data-cat="backend">
-          <h3>GiA — academic journal portal</h3>
-          <p>An information portal for “Izvestia vuzov. Geodesy and Aerophotography”: an auto-generated admin panel, SSO / OpenID Connect, protection against CSRF/XSS/SQLi, XML metadata export. Deployed to a real server.</p>
-          <div class="proj-tags">Django · PostgreSQL · Docker · Nginx · Gunicorn</div>
-          <span class="proj-note">thesis project · private repository</span>
         </div>
         <a class="proj" data-cat="ml" href="https://denisdrobyshev.github.io/reinforce/" target="_blank" rel="noopener">
           <h3>reinforce</h3>

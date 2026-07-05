@@ -316,6 +316,30 @@ h1, h2, h3 { line-height: 1.2; margin: 0; letter-spacing: -0.02em; }
 }
 .badges img { height: 22px; display: block; border-radius: 4px; }
 
+/* ===== Showcase (главный проект) ===== */
+.showcase {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 14px;
+  padding: 1.5rem 1.7rem;
+  margin-bottom: 1.6rem;
+}
+.showcase-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--accent-2);
+  margin-bottom: 0.5rem;
+}
+.showcase h3 { font-size: 1.25rem; margin-bottom: 0.55rem; }
+.showcase p { color: var(--muted); font-size: 0.95rem; margin: 0 0 0.9rem; max-width: 65ch; }
+.showcase .tags { margin-bottom: 0.6rem; }
+.showcase .proj-note { display: block; }
+
 /* ===== Filters + Projects ===== */
 .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.6rem; }
 .filter {
