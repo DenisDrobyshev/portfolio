@@ -1,42 +1,60 @@
-# Сайт-визитка — Денис Дробышев
+<div align="center">
 
-Личный сайт-портфолио: контакты, стек, проекты, опыт. Один статический
-HTML-файл + немного CSS и ванильного JS. Без сборки, без фреймворков,
-без зависимостей — открывается напрямую в браузере.
+# 🌐 Денис Дробышев — сайт-портфолио
 
-## Структура
+### 👉 [**denisdrobyshev.github.io/portfolio**](https://denisdrobyshev.github.io/portfolio/)
 
-```
-index.html            # весь контент страницы
-assets/styles.css     # стили (тёмная/светлая тема)
-assets/script.js      # тема, фильтр проектов, анимации появления
-assets/avatar.jpg     # фото профиля
-assets/favicon.svg    # иконка вкладки
-resume.html           # резюме (RU)
-resume-en.html        # CV (EN)
-```
+Личная страница-визитка backend / Python / ML разработчика:
+проекты, технологический стек, опыт и контакты.
 
-## Как посмотреть локально
+[![Открыть сайт](https://img.shields.io/badge/Открыть_сайт-6366f1?style=for-the-badge&logo=githubpages&logoColor=white)](https://denisdrobyshev.github.io/portfolio/)
+[![RU](https://img.shields.io/badge/RU-версия-2563a8?style=for-the-badge)](https://denisdrobyshev.github.io/portfolio/index.html)
+[![EN](https://img.shields.io/badge/EN-version-2563a8?style=for-the-badge)](https://denisdrobyshev.github.io/portfolio/en.html)
 
-Просто открыть `index.html` в браузере. Либо поднять локальный сервер:
+</div>
 
-```bash
-python -m http.server 8000
-# http://localhost:8000
-```
+---
 
-## Как опубликовать бесплатно (GitHub Pages)
+## О сайте
 
-1. Создать публичный репозиторий **`DenisDrobyshev.github.io`** на GitHub.
-2. Запушить содержимое этой папки в ветку `main`.
-3. Settings → Pages → Source: **Deploy from a branch**, ветка `main`, папка `/ (root)`.
-4. Через минуту сайт будет доступен по адресу **https://denisdrobyshev.github.io**.
+Одностраничная визитка, которая коротко и наглядно рассказывает, кто я и что умею:
+ключевые проекты с описанием и ссылками, полный технологический стек, опыт работы и
+образование, прямые контакты и резюме. Сделана лёгкой и быстрой — **без фреймворков и
+сборки**, только чистые HTML, CSS и немного ванильного JavaScript.
 
-> Альтернативы в один клик: [Netlify Drop](https://app.netlify.com/drop),
-> [Cloudflare Pages](https://pages.cloudflare.com/), [Vercel](https://vercel.com) —
-> достаточно перетащить папку.
+## Возможности
 
-## Обновить контент
+- 🇷🇺 / 🇬🇧 &nbsp;**Две языковые версии** — русская и английская, с переключателем в шапке
+- 🌗 &nbsp;**Тёмная и светлая тема** с запоминанием выбора
+- 🗂 &nbsp;**Фильтр проектов** по категориям (Backend / ML / Frontend / Мобайл / Другое)
+- 🏷 &nbsp;**Бейджи технологий** и живой **счётчик посещений**
+- 📱 &nbsp;**Адаптивная** вёрстка — аккуратно на телефоне, планшете и десктопе
+- ⚡ &nbsp;**Лёгкость** — ноль зависимостей, мгновенная загрузка, деплой на GitHub Pages
+- 📄 &nbsp;Встроенное резюме на русском и английском
 
-Проекты и тексты правятся прямо в `index.html`. Новый проект — скопировать
-блок `<a class="proj" ...>` в секции «Все проекты» и поменять текст/ссылку.
+## Стек сайта
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222?style=flat-square&logo=githubpages&logoColor=white)
+
+Без React, Vue и сборщиков — специально, чтобы страница была максимально лёгкой.
+
+## Что внутри
+
+| Раздел | Содержание |
+|---|---|
+| **Hero** | Имя, роль, фото, статус «открыт к работе», быстрые ссылки |
+| **Обо мне** | Кратко о себе + ключевые факты |
+| **Стек** | Языки, backend, ML, базы данных, frontend, DevOps |
+| **Ключевые проекты** | ARC, GiA, reinforce, approval-service — с описаниями |
+| **Все проекты** | 20+ карточек с фильтром, каждая ведёт на GitHub |
+| **Опыт и образование** | Техподдержка, производственная практика, бакалавриат |
+| **Контакты** | Почта, Telegram, GitHub, Habr Career, резюме |
+
+---
+
+<div align="center">
+<sub>Статический сайт на GitHub Pages. Локально: <code>python -m http.server</code> в папке репозитория.</sub>
+</div>
