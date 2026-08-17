@@ -1,457 +1,315 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="dark">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Денис Дробышев — Backend / Python / ML разработчик</title>
-  <meta name="description" content="Денис Дробышев — backend-разработчик на Python (Django, FastAPI, Docker). Портфолио проектов: full-stack экосистема ARC, портал научного журнала, RL-библиотека, ML и computer vision." />
+  <title>Денис Дробышев</title>
+  <meta name="description" content="Денис Дробышев — фулстек-разработчик: Python, Django, FastAPI, React. Открытый код: библиотеки для ML, LLM-агентов и операционных решений." />
   <meta name="author" content="Денис Дробышев" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://denisdrobyshev.github.io/portfolio/" />
-  <meta property="og:title" content="Денис Дробышев — Backend / Python / ML разработчик" />
-  <meta property="og:description" content="Портфолио: full-stack экосистема, порталы на Django/FastAPI, RL-библиотека, ML и computer vision." />
+  <meta property="og:title" content="Денис Дробышев" />
+  <meta property="og:description" content="Фулстек-разработчик: Python, Django, FastAPI, React. Открытый код: библиотеки для ML, LLM-агентов и операционных решений." />
   <meta property="og:image" content="https://denisdrobyshev.github.io/portfolio/assets/avatar.jpg" />
   <link rel="alternate" hreflang="en" href="https://denisdrobyshev.github.io/portfolio/en.html" />
   <link rel="alternate" hreflang="ru" href="https://denisdrobyshev.github.io/portfolio/index.html" />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="preload" href="assets/styles.css" as="style" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <!-- ===== Header ===== -->
-  <header class="site-header" id="top">
-    <a href="#top" class="brand" aria-label="В начало">
-      <span class="brand-mark">dd</span>
-      <span class="brand-name">Денис Дробышев</span>
-    </a>
-    <nav class="nav" aria-label="Основная навигация">
-      <a href="#about">Обо мне</a>
-      <a href="#skills">Стек</a>
-      <a href="#projects">Проекты</a>
-      <a href="#experience">Опыт</a>
-      <a href="#contact">Контакты</a>
-    </nav>
-    <div class="lang-switch" aria-label="Язык">
-      <a class="is-active" href="index.html" aria-current="page">RU</a>
-      <a href="en.html">EN</a>
-    </div>
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">
-      <span class="theme-icon">☾</span>
-    </button>
-  </header>
+<div class="wrap">
 
-  <main>
-    <!-- ===== Hero ===== -->
-    <section class="hero">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <div class="hero-text reveal">
-          <p class="eyebrow">Backend&nbsp;·&nbsp;Python&nbsp;·&nbsp;ML&nbsp;·&nbsp;Москва</p>
-          <h1>Денис <span class="grad">Дробышев</span></h1>
-          <p class="lead">
-            Backend-разработчик на Python. Разрабатываю проекты целиком: проектирование БД,
-            серверная логика, API, интерфейс, Docker и деплой на сервера.
-          </p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="mailto:drobishev.denis@icloud.com">Написать на почту</a>
-            <a class="btn btn-ghost" href="resume.html" target="_blank" rel="noopener">Резюме&nbsp;↗</a>
-            <a class="btn btn-ghost" href="https://github.com/DenisDrobyshev" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
-          </div>
-          <ul class="hero-badges" aria-label="Статус">
-            <li><span class="dot"></span> Открыт к предложениям</li>
-          </ul>
-        </div>
-        <div class="hero-avatar reveal">
-          <div class="avatar-ring">
-            <img src="assets/avatar.jpg" alt="Фото Дениса Дробышева" width="220" height="220" loading="eager" />
-          </div>
-        </div>
-      </div>
+  <span class="lang"><a href="en.html">English</a></span>
 
-      <ul class="stats" aria-label="Ключевые цифры">
-        <li class="reveal"><b>5</b><span>выпущенных open-source проектов</span></li>
-        <li class="reveal"><b>400+</b><span>автотестов в проектах</span></li>
-        <li class="reveal"><b>30+</b><span>алгоритмов RL с нуля</span></li>
-        <li class="reveal"><b>1+</b><span>год в ИТ-инфраструктуре</span></li>
-      </ul>
-    </section>
-
-    <!-- ===== About ===== -->
-    <section id="about" class="section">
-      <h2 class="section-title"><span class="num">01</span> Обо мне</h2>
-      <div class="about-grid">
-        <div class="reveal">
-          <p>
-            Выпускник университета МИИГАиК (Московский государственный университет геодезии и картографии) 2026 по направлению «Прикладная информатика» Факультета Геоинформатики и Информационной Безопасности.
-            Больше года работал в технической поддержке МИИГАиК (администрирование
-            Windows/Linux, скрипты, Active Directory, различные заявки по ремонту и помощи в инфраструктуре) и перехожу в
-            <strong>backend-разработку на Python</strong>. Стараюсь доводить проект
-            от идеи до продакшена: схема данных, бизнес-логика, REST&nbsp;API,
-            фронтенд, контейнеризация и деплой.
-          </p>
-          <p>
-            Кроме бэкенда разрабатываю проекты по машинному обучению и компьютерному зрению —
-            от классификаторов изображений до real-time детекции на видеопотоке.
-            Пишу тесты, слежу за чистотой кода и настраиваю CI.
-          </p>
-        </div>
-        <div class="about-facts reveal">
-          <div class="fact"><span>Локация</span><b>Москва</b></div>
-          <div class="fact"><span>Образование</span><b>МИИГАиК, 2022–2026</b></div>
-          <div class="fact"><span>Статус</span><b>Готов приступить сразу</b></div>
-          <div class="fact"><span>Языки</span><b>Русский, English</b></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Skills ===== -->
-    <section id="skills" class="section">
-      <h2 class="section-title"><span class="num">02</span> Технологический стек</h2>
-
-      <div class="badges reveal" aria-label="Технологии">
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" alt="Go" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white" alt="Django" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white" alt="FastAPI" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat&logo=nestjs&logoColor=white" alt="NestJS" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" alt="React" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white" alt="Redis" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=white" alt="Nginx" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white" alt="PyTorch" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white" alt="scikit-learn" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" alt="Git" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/GitLab-FC6D26?style=flat&logo=gitlab&logoColor=white" alt="GitLab" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub" height="22" loading="lazy" />
-      </div>
-
-      <div class="skills-grid">
-        <article class="skill-card reveal">
-          <h3>Языки</h3>
-          <ul class="tags">
-            <li>Python</li><li>Go</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>Java</li><li>Dart</li>
-          </ul>
-        </article>
-        <article class="skill-card reveal">
-          <h3>Backend</h3>
-          <ul class="tags">
-            <li>Django</li><li>FastAPI</li><li>NestJS</li><li>REST API</li>
-            <li>async SQLAlchemy</li><li>Prisma</li><li>JWT / OAuth / OIDC</li>
-          </ul>
-        </article>
-        <article class="skill-card reveal">
-          <h3>Данные и ML</h3>
-          <ul class="tags">
-            <li>PyTorch</li><li>TensorFlow / Keras</li><li>scikit-learn</li>
-            <li>NumPy</li><li>Pandas</li><li>OpenCV</li><li>YOLO</li><li>InsightFace</li>
-          </ul>
-        </article>
-        <article class="skill-card reveal">
-          <h3>Базы данных</h3>
-          <ul class="tags">
-            <li>PostgreSQL</li><li>Redis</li><li>SQLite</li><li>MinIO / S3</li>
-          </ul>
-        </article>
-        <article class="skill-card reveal">
-          <h3>Frontend</h3>
-          <ul class="tags">
-            <li>React</li><li>Vue / Nuxt</li><li>Vite</li><li>Tailwind</li><li>HTML / CSS</li>
-          </ul>
-        </article>
-        <article class="skill-card reveal">
-          <h3>DevOps и инструменты</h3>
-          <ul class="tags">
-            <li>Docker</li><li>docker-compose</li><li>Nginx</li><li>Gunicorn</li>
-            <li>Linux</li><li>Git</li><li>GitHub Actions</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== Projects ===== -->
-    <section id="projects" class="section">
-      <h2 class="section-title"><span class="num">03</span> Проекты</h2>
-
-      <article class="showcase reveal">
-        <span class="showcase-label">Главный проект · дипломная работа</span>
-        <h3>GiA — портал научного журнала</h3>
-        <p>
-          Веб портал «Известия вузов. Геодезия и аэрофотосъёмка» с управлением
-          архивами выпусков: автогенерируемая админка, SSO / OpenID Connect, защита от
-          CSRF/XSS/SQLi, выгрузка метаданных в XML в ВАК/eLibrary/РИНЦ, многоуровневое тестирование.
-          Развёрнут на тестовом dev стенде ДИТ МИИГАиК (PostgreSQL, Gunicorn, Nginx).
-        </p>
-        <ul class="tags">
-          <li>Django</li><li>PostgreSQL</li><li>Docker</li><li>Nginx</li><li>Gunicorn</li><li>OIDC</li>
-        </ul>
-        <span class="proj-note">приватный репозиторий</span>
-      </article>
-
-      <div class="filters" role="tablist" aria-label="Фильтр проектов">
-        <button class="filter is-active" data-filter="all" type="button">Все</button>
-        <button class="filter" data-filter="backend" type="button">Backend</button>
-        <button class="filter" data-filter="ml" type="button">ML / CV</button>
-        <button class="filter" data-filter="frontend" type="button">Frontend</button>
-        <button class="filter" data-filter="mobile" type="button">Мобайл</button>
-        <button class="filter" data-filter="other" type="button">Другое</button>
-      </div>
-
-      <div class="proj-grid" id="projGrid">
-        <!-- Крупные проекты -->
-        <div class="proj proj--static" data-cat="backend">
-          <h3>ARC</h3>
-          <p>Экосистема из 5 модулей (фитнес, библиотека, мессенджер, соцсеть, знакомства) на общем ядре: JWT-авторизация, realtime-мессенджер на WebSocket, медиа в S3, Pro-подписка и рефералы, CI и деплой.</p>
-          <div class="proj-tags">React · TypeScript · NestJS · PostgreSQL · Redis · Docker</div>
-          <span class="proj-note">приватный репозиторий</span>
-        </div>
-        <a class="proj" data-cat="ml" href="https://denisdrobyshev.github.io/decisionrl/" target="_blank" rel="noopener">
-          <h3>decisionrl</h3>
-          <p>RL для операционных решений (ценообразование, склад, энергетика, очереди, цепочки поставок): к каждой среде идёт классический baseline. Обученная политика бьёт сильный baseline на 5 задачах и совпадает с точным DP-оптимумом там, где он есть; паритет с Stable-Baselines3 на CartPole. 31 алгоритм, 20 сред, 385 тестов, покрытие 86%, публикация в PyPI.</p>
-          <div class="proj-tags">PyTorch · NumPy · pytest · MkDocs</div>
-        </a>
-        <a class="proj" data-cat="backend" href="https://github.com/DenisDrobyshev/approval-service" target="_blank" rel="noopener">
-          <h3>approval-service</h3>
-          <p>Backend-сервис согласования контента: идемпотентность, state machine, audit log, transactional outbox, мультитенант-изоляция, 39 тестов.</p>
-          <div class="proj-tags">FastAPI · SQLAlchemy 2.0 · Alembic · PostgreSQL</div>
-        </a>
-
-        <!-- ML / CV -->
-        <a class="proj" data-cat="ml" href="https://github.com/DenisDrobyshev/Detector_app" target="_blank" rel="noopener">
-          <h3>Detector_app</h3>
-          <p>Мониторинг дисциплины по видеопотоку в реальном времени: YOLO + InsightFace, Streamlit, CSV-отчёты.</p>
-          <div class="proj-tags">YOLO · InsightFace · Streamlit</div>
-        </a>
-        <a class="proj" data-cat="ml" href="https://github.com/DenisDrobyshev/Geomarketing_analysis" target="_blank" rel="noopener">
-          <h3>Geomarketing_analysis</h3>
-          <p>Геомаркетинговая ML-аналитика: поиск оптимальной локации для фитнес-центра.</p>
-          <div class="proj-tags">scikit-learn · OpenStreetMap · H3</div>
-        </a>
-        <a class="proj" data-cat="ml" href="https://github.com/DenisDrobyshev/classification_animals" target="_blank" rel="noopener">
-          <h3>classification_animals</h3>
-          <p>Классификатор изображений: сравнение Dense / CNN / VGG (F1 0.88), деплой на Streamlit + FastAPI.</p>
-          <div class="proj-tags">TensorFlow · Keras · FastAPI</div>
-        </a>
-        <a class="proj" data-cat="ml" href="https://github.com/DenisDrobyshev/CIFAR10" target="_blank" rel="noopener">
-          <h3>CIFAR10</h3>
-          <p>Классификация изображений CIFAR-10 — задача компьютерного зрения.</p>
-          <div class="proj-tags">Deep Learning · CV</div>
-        </a>
-        <a class="proj" data-cat="ml" href="https://github.com/DenisDrobyshev/universum" target="_blank" rel="noopener">
-          <h3>universum</h3>
-          <p>Практические работы по нейросетям и Deep Learning за выпускной семестр.</p>
-          <div class="proj-tags">Neural Networks · Jupyter</div>
-        </a>
-
-        <!-- Backend -->
-        <a class="proj" data-cat="backend" href="https://github.com/DenisDrobyshev/excel-to-db-converter" target="_blank" rel="noopener">
-          <h3>excel-to-db-converter</h3>
-          <p>Веб-приложение на FastAPI: конвертация Excel в таблицы БД с авторизацией и валидацией.</p>
-          <div class="proj-tags">FastAPI · REST · Backend</div>
-        </a>
-        <a class="proj" data-cat="backend" href="https://github.com/DenisDrobyshev/StreamlitFastAPI_app" target="_blank" rel="noopener">
-          <h3>StreamlitFastAPI_app</h3>
-          <p>Демо-связка Streamlit-фронтенда и FastAPI-бэкенда.</p>
-          <div class="proj-tags">FastAPI · Streamlit</div>
-        </a>
-
-        <!-- Frontend -->
-        <a class="proj" data-cat="frontend" href="https://github.com/DenisDrobyshev/chinese-premium-store" target="_blank" rel="noopener">
-          <h3>chinese-premium-store</h3>
-          <p>Премиум интернет-магазин на React: каталог с фильтрами, корзина, избранное.</p>
-          <div class="proj-tags">React · React Router · Context</div>
-        </a>
-        <a class="proj" data-cat="frontend" href="https://github.com/DenisDrobyshev/veloshop" target="_blank" rel="noopener">
-          <h3>veloshop</h3>
-          <p>Магазин велосипедов на Vue / Nuxt.</p>
-          <div class="proj-tags">Vue · Nuxt</div>
-        </a>
-        <a class="proj" data-cat="frontend" href="https://github.com/DenisDrobyshev/store" target="_blank" rel="noopener">
-          <h3>store</h3>
-          <p>Учебный интернет-магазин на React.</p>
-          <div class="proj-tags">React · JavaScript</div>
-        </a>
-        <a class="proj" data-cat="frontend" href="https://github.com/DenisDrobyshev/miigaik-lk" target="_blank" rel="noopener">
-          <h3>miigaik-lk</h3>
-          <p>Личный кабинет студента МИИГАиК: расписание, зачётка, профиль.</p>
-          <div class="proj-tags">HTML · CSS · JS</div>
-        </a>
-
-        <!-- Mobile -->
-        <a class="proj" data-cat="mobile" href="https://github.com/DenisDrobyshev/ToDoshka" target="_blank" rel="noopener">
-          <h3>ToDoshka</h3>
-          <p>Кроссплатформенное todo-приложение на Flutter.</p>
-          <div class="proj-tags">Flutter · Dart</div>
-        </a>
-        <a class="proj" data-cat="mobile" href="https://github.com/DenisDrobyshev/flutter_dev" target="_blank" rel="noopener">
-          <h3>flutter_dev</h3>
-          <p>Учебное кроссплатформенное приложение на Flutter.</p>
-          <div class="proj-tags">Flutter · Dart</div>
-        </a>
-
-        <!-- Other -->
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/StableDroneSystemAnalysis" target="_blank" rel="noopener">
-          <h3>StableDroneSystemAnalysis</h3>
-          <p>Анализ устойчивости динамических систем БПЛА: моделирование, собственные числа, GUI.</p>
-          <div class="proj-tags">Python · NumPy · Control</div>
-        </a>
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/FunctionSketch" target="_blank" rel="noopener">
-          <h3>FunctionSketch</h3>
-          <p>Распознавание математической функции по нарисованному графику; экспорт в LaTeX/Excel.</p>
-          <div class="proj-tags">Python · Math · GUI</div>
-        </a>
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/Space_Game" target="_blank" rel="noopener">
-          <h3>Space_Game</h3>
-          <p>Космический шутер на Python (Pygame).</p>
-          <div class="proj-tags">Python · Pygame</div>
-        </a>
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/game_3072" target="_blank" rel="noopener">
-          <h3>game_3072</h3>
-          <p>Игра-головоломка 3072 (по мотивам 2048) на Java.</p>
-          <div class="proj-tags">Java · Puzzle</div>
-        </a>
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/Flappy_Bird" target="_blank" rel="noopener">
-          <h3>Flappy_Bird</h3>
-          <p>Клон Flappy Bird на Python.</p>
-          <div class="proj-tags">Python · Pygame</div>
-        </a>
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/English_Learn" target="_blank" rel="noopener">
-          <h3>English_Learn</h3>
-          <p>Программа для изучения английских слов на Python.</p>
-          <div class="proj-tags">Python · Education</div>
-        </a>
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/Office_Tweaks" target="_blank" rel="noopener">
-          <h3>Office_Tweaks</h3>
-          <p>Утилита для автоматизации офисных задач на Python.</p>
-          <div class="proj-tags">Python · Automation</div>
-        </a>
-      </div>
-
-      <p class="proj-more reveal">
-        Полный список — на GitHub.
-        <a href="https://github.com/DenisDrobyshev?tab=repositories" target="_blank" rel="noopener">Открыть профиль ↗</a>
+  <section class="intro">
+    <img src="assets/avatar.jpg" alt="Денис Дробышев" width="132" height="132" />
+    <div>
+      <h1>Денис Дробышев</h1>
+      <p>
+        Привет! Я фулстек-разработчик. Пишу бэкенды на Python — Django и FastAPI,
+        снизу PostgreSQL, сверху Docker и Nginx — и довожу проекты до конца:
+        схема, API, интерфейс, деплой на настоящий сервер.
       </p>
-    </section>
-
-    <!-- ===== Experience & Education ===== -->
-    <section id="experience" class="section">
-      <h2 class="section-title"><span class="num">04</span> Опыт и образование</h2>
-      <div class="timeline">
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <h3>Производственная практика — Дирекция ИТ (ДИТ) МИИГАиК</h3>
-              <span class="tl-date">май – июнь 2026</span>
-            </div>
-            <p>
-              Развернул портал GiA на тестовом сервере: PostgreSQL, Gunicorn, Nginx.
-              Настроил SSO. Работа с реальной инфраструктурой организации.
-            </p>
-          </div>
-        </div>
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <h3>Техник службы технической поддержки — МИИГАиК</h3>
-              <span class="tl-date">дек 2024 – янв 2026</span>
-            </div>
-            <p>
-              Обслуживание и ремонт компьютерной техники, системное администрирование
-              Windows и Linux, скрипты на PowerShell и Bash, работа с Active Directory,
-              диагностика и настройка ПО. 1 год 2 месяца.
-            </p>
-          </div>
-        </div>
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <h3>МИИГАиК — бакалавр, «Прикладная информатика» (09.03.03)</h3>
-              <span class="tl-date">2022 – 2026</span>
-            </div>
-            <p>
-              Московский государственный университет геодезии и картографии.
-              ВКР — информационный портал научного журнала на Django (проект GiA).
-            </p>
-          </div>
-        </div>
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <h3>ЦДПО ФГБОУ ВО «МИИГАиК» Разработка геоинформационных решений с использованием методов искусственного интеллекта </h3>
-              <span class="tl-date">2022 – 2026</span>
-            </div>
-            <p>
-              Прошел обучение на программе «Разработка геоинформационных
-              решений с использованием методов искусственного интеллекта»
-              (Цифровая кафедра МИИГАиК; квалификация — «Специалист по
-              большим данным»).
-              В рамках курса последовательно освоил базовые концепции ИИ и
-              машинного обучения и закрепил их на практике в Python: работа с
-              данными (NumPy/Pandas), визуализация (Matplotlib/Plotly), сбор и
-              предобработка датасетов, обработка аномалий, отбор и
-              преобразование признаков. Отдельный блок был посвящён оценке
-              качества моделей (метрики для
-              регрессии/классификации/кластеризации), кросс‑валидации,
-              переобучению и подбору гиперпараметров, а также построению и
-              развертыванию учебных ML‑приложений.
-              Далее изучались основные алгоритмы ML: обучение с учителем
-              (kNN, линейная и логистическая регрессия, деревья решений,
-              SVM, наивный Байес), обучение без учителя (снижение
-              размерности, кластеризация), ансамблевые методы и бустинг. В
-              части глубокого обучения прошёл основы нейросетей и практику в
-              Keras, современные архитектуры (в т.ч. CNN, transfer learning,
-              регуляризация), а также отдельные темы вроде автоэнкодеров,
-              GAN, безопасности ИИ и применения YOLO для задач
-              детекции/классификации.
-              Во втором модуле упор был на GeoAI: работа с
-              пространственными данными в Python (GeoPandas, Rasterio,
-              Xarray/Rioxarray), получение данных через API (requests,
-              OSM/OSMnx), визуализация и интерактивное картографирование
-              (Leafmap), предобработка геоданных и инженерия признаков,
-              практики в Google Earth Engine. В прикладной части выполнял
-              задачи пространственного анализа и геомаркетинга с ML/DL, а
-              также знакомился с интеграцией ИИ‑решений в QGIS:
-              разработка/встраивание модели, backend‑часть и веб‑приложение
-              (Streamlit), подготовка QGIS‑плагина и работа над итоговым
-              проектом в рамках стажировки/аттестации.
-            </p>
-          </div>
-        </div>
+      <p>
+        Вторую половину времени трачу на открытый код: библиотеки для машинного
+        обучения, LLM-агентов и операционных решений. Пять проектов с релизами,
+        три пакета на PyPI. Ещё бывает компьютерное зрение — детекция на видео,
+        классификаторы, геоаналитика на открытых данных.
+      </p>
+      <p>
+        Сейчас открыт к предложениям по бэкенду и фулстеку.
+      </p>
+      <div class="links">
+        <a href="https://github.com/DenisDrobyshev">GitHub</a><span class="sep">·</span>
+        <a href="https://github.com/DrobyshevDev">DrobyshevDev</a><span class="sep">·</span>
+        <a href="https://t.me/multiheadselfattention">Telegram</a><span class="sep">·</span>
+        <a href="https://career.habr.com/denisdrobyshev">Хабр Карьера</a><span class="sep">·</span>
+        <a href="resume.html">Резюме</a><span class="sep">·</span>
+        <a href="mailto:drobishev.denis@icloud.com">drobishev.denis@icloud.com</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ===== Contact ===== -->
-    <section id="contact" class="section contact">
-      <div class="contact-card reveal">
-        <h2>Давайте познакомимся</h2>
-        <p>Открыт к предложениям по бэкенду и фулстеку. Отвечаю быстро.</p>
-        <div class="contact-links">
-          <a class="btn btn-primary" href="mailto:drobishev.denis@icloud.com">drobishev.denis@icloud.com</a>
-          <a class="btn btn-ghost" href="https://t.me/multiheadselfattention" target="_blank" rel="noopener">Telegram ↗</a>
-          <a class="btn btn-ghost" href="https://github.com/DenisDrobyshev" target="_blank" rel="noopener">GitHub ↗</a>
-          <a class="btn btn-ghost" href="https://career.habr.com/denisdrobyshev" target="_blank" rel="noopener">Habr Career ↗</a>
-          <a class="btn btn-ghost" href="resume.html" target="_blank" rel="noopener">Резюме RU ↗</a>
-          <a class="btn btn-ghost" href="resume-en.html" target="_blank" rel="noopener">CV EN ↗</a>
-        </div>
+  <h2>Новости</h2>
+  <div class="news">
+    <div class="row">
+      <div class="when">9 августа 2026</div>
+      <p class="what">📦 Вышел <a href="https://github.com/DrobyshevDev/stadion">stadion</a> v0.1.0 — полигон, где агента меряют против настроенной классики и точного оптимума, а не против лидерборда. На PyPI под именем <code>stadion-rl</code>.</p>
+    </div>
+    <div class="row">
+      <div class="when">31 июля 2026</div>
+      <p class="what">📦 Сразу два релиза: <a href="https://github.com/DrobyshevDev/praxis">praxis</a> v0.1.0 — юридический ассистент с проверяемыми цитатами, и <a href="https://github.com/DrobyshevDev/mlango">mlango</a> v0.2.0.</p>
+    </div>
+    <div class="row">
+      <div class="when">24 июля 2026</div>
+      <p class="what">📦 <a href="https://github.com/DrobyshevDev/glia">glia</a> v0.8.2 — прозрачная библиотека для LLM-агентов, ядро без зависимостей.</p>
+    </div>
+    <div class="row">
+      <div class="when">18 июля 2026</div>
+      <p class="what">📦 <a href="https://github.com/DrobyshevDev/decisionrl">decisionrl</a> v0.4.0: 31 алгоритм, 22 среды, 400 тестов, покрытие 86%.</p>
+    </div>
+    <div class="row">
+      <div class="when">лето 2026</div>
+      <p class="what">🎓 Защитил диплом и выкатил портал научного журнала на инфраструктуру МИИГАиК — он там и работает.</p>
+    </div>
+  </div>
+
+  <h2>Открытый код</h2>
+  <p class="rest">
+    Библиотеки и инструменты живут в организации
+    <a href="https://github.com/DrobyshevDev">DrobyshevDev</a>: типизированы, покрыты
+    тестами в CI, выпускаются тегированными релизами.
+  </p>
+
+  <div class="entry">
+    <div><span class="chip">PyPI</span></div>
+    <div>
+      <h3>decisionrl</h3>
+      <p>Обучение с подкреплением для операционных решений: ценообразование, склад, энергетика, очереди, цепочки поставок. К каждой прикладной среде идёт классический baseline из исследования операций, поэтому политику измеряют, а не объявляют хорошей.</p>
+      <div class="stack">Python · PyTorch · NumPy · Gymnasium</div>
+      <div class="more">
+        <a href="https://github.com/DrobyshevDev/decisionrl">GitHub</a><span class="sep">•</span>
+        <a href="https://pypi.org/project/decisionrl/">PyPI</a><span class="sep">•</span>
+        <a href="https://drobyshevdev.github.io/decisionrl/">документация</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
 
-  <footer class="site-footer">
-    <span>© <span id="year"></span> Денис Дробышев · Москва</span>
-    <img class="counter" src="https://visitor-badge.laobi.icu/badge?page_id=denisdrobyshev.portfolio&left_text=visitors&left_color=%23131b2b&right_color=%235179c0" alt="Счётчик посещений" loading="lazy" onerror="this.style.display='none'" />
-    <a href="#top">Наверх ↑</a>
+  <div class="entry">
+    <div><span class="chip">PyPI</span></div>
+    <div>
+      <h3>stadion</h3>
+      <p>Полигон для операционных решений: агента оценивают против настроенного классического метода и точного оптимума, с доверительным интервалом. Вердикт «неразличимо» — полноценный исход, а не неудача.</p>
+      <div class="stack">Python · PyTorch · динамическое программирование</div>
+      <div class="more">
+        <a href="https://github.com/DrobyshevDev/stadion">GitHub</a><span class="sep">•</span>
+        <a href="https://pypi.org/project/stadion-rl/">PyPI</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">PyPI</span></div>
+    <div>
+      <h3>mlango</h3>
+      <p>Фреймворк для ML, аналитики и LLM-агентов, построенный на философии Django: вы объявляете датасеты, модели и оценки, фреймворк их запускает, версионирует и записывает.</p>
+      <div class="stack">Python · MkDocs · GitHub Actions</div>
+      <div class="more">
+        <a href="https://github.com/DrobyshevDev/mlango">GitHub</a><span class="sep">•</span>
+        <a href="https://pypi.org/project/mlango/">PyPI</a><span class="sep">•</span>
+        <a href="https://drobyshevdev.github.io/mlango/">документация</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">релиз</span></div>
+    <div>
+      <h3>glia</h3>
+      <p>Прозрачная библиотека для сборки LLM-агентов: современные техники как опциональные примитивы, никакого скрытого потока управления, ядро без зависимостей.</p>
+      <div class="stack">Python · без зависимостей в ядре</div>
+      <div class="more">
+        <a href="https://github.com/DrobyshevDev/glia">GitHub</a><span class="sep">•</span>
+        <a href="https://drobyshevdev.github.io/glia/">документация</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">релиз</span></div>
+    <div>
+      <h3>praxis</h3>
+      <p>Юридический ассистент по праву РФ, у которого цитаты проверяются, а не утверждаются: гибридный поиск с реранкингом, NLI-верификатор цитат, GraphRAG по перекрёстным ссылкам.</p>
+      <div class="stack">Python · FastAPI · RAG · Docker</div>
+      <div class="more">
+        <a href="https://github.com/DrobyshevDev/praxis">GitHub</a><span class="sep">•</span>
+        <a href="https://github.com/DrobyshevDev/praxis/releases/latest">релиз</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">курс</span></div>
+    <div>
+      <h3>lemma</h3>
+      <p>Бесплатный курс: дорожная карта в ML, DL и RL — с нуля и до умения читать и воспроизводить исследования. 27 модулей, ноутбуки проверяются в CI.</p>
+      <div class="stack">MkDocs · Jupyter · GitHub Actions</div>
+      <div class="more">
+        <a href="https://github.com/DrobyshevDev/lemma">GitHub</a><span class="sep">•</span>
+        <a href="https://drobyshevdev.github.io/lemma/">сайт курса</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>Проекты</h2>
+
+  <div class="entry">
+    <div><span class="chip">в проде</span></div>
+    <div>
+      <h3>GiA — портал научного журнала</h3>
+      <p>Портал «Известия вузов. Геодезия и аэрофотосъёмка» с архивом выпусков: автогенерируемая админка для редакции, корпоративный SSO, доступ по ролям, выгрузка метаданных в XML для библиографических баз. Дипломная работа, развёрнута на сервере университета.</p>
+      <div class="stack">Python · Django · PostgreSQL · Docker · Nginx · Gunicorn · OIDC</div>
+      <div class="more"><span class="rest">приватный репозиторий, демо по запросу</span></div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">5 модулей</span></div>
+    <div>
+      <h3>ARC</h3>
+      <p>Экосистема из пяти модулей на общем ядре: фитнес, библиотека, мессенджер, соцсеть, знакомства. JWT-авторизация, realtime-мессенджер на WebSocket, медиа в S3, подписка и рефералы, CI и деплой.</p>
+      <div class="stack">Python · FastAPI · PostgreSQL · WebSocket · S3 · Docker</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">бэкенд</span></div>
+    <div>
+      <h3>approval-service</h3>
+      <p>Сервис согласования контента: контент двигается по конечному автомату, каждый переход попадает в журнал аудита, события уходят через транзакционный outbox. Idempotency-Key, изоляция арендаторов по воркспейсам, вырезание секретов из логов.</p>
+      <div class="stack">Python · FastAPI · async SQLAlchemy 2.0 · Alembic · PostgreSQL · pytest</div>
+      <div class="more"><a href="https://github.com/DenisDrobyshev/approval-service">GitHub</a></div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">CV</span></div>
+    <div>
+      <h3>Detector_app</h3>
+      <p>Находит события в кадре на лету: YOLO для детекции, InsightFace для распознавания лиц. Работает с веб-камерой и с видеофайлом, отдаёт отчёты в CSV.</p>
+      <div class="stack">Python · YOLO · InsightFace · OpenCV · Streamlit</div>
+      <div class="more"><a href="https://github.com/DenisDrobyshev/Detector_app">GitHub</a></div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">ML</span></div>
+    <div>
+      <h3>Geomarketing_analysis</h3>
+      <p>Пайплайн, который подсказывает, где открыть фитнес-центр: данные OpenStreetMap, гексагональная сетка H3, модель привлекательности на scikit-learn, интерактивные карты.</p>
+      <div class="stack">Python · scikit-learn · H3 · OSMnx · GeoPandas</div>
+      <div class="more"><a href="https://github.com/DenisDrobyshev/Geomarketing_analysis">GitHub</a></div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">CV</span></div>
+    <div>
+      <h3>classification_animals</h3>
+      <p>Сравнил три архитектуры — полносвязную, простую CNN и в стиле VGG. Лучший результат F1 0.88. Инференс отдаётся через FastAPI за интерфейсом на Streamlit.</p>
+      <div class="stack">Python · TensorFlow/Keras · FastAPI · Streamlit</div>
+      <div class="more"><a href="https://github.com/DenisDrobyshev/classification_animals">GitHub</a></div>
+    </div>
+  </div>
+
+  <p class="rest">
+    Ещё:
+    <a href="https://github.com/DenisDrobyshev/excel-to-db-converter">excel-to-db-converter</a>,
+    <a href="https://github.com/DenisDrobyshev/miigaik-lk">miigaik-lk</a>,
+    <a href="https://github.com/DenisDrobyshev/StreamlitFastAPI_app">StreamlitFastAPI_app</a>,
+    <a href="https://github.com/DenisDrobyshev/FunctionSketch">FunctionSketch</a>,
+    <a href="https://github.com/DenisDrobyshev/StableDroneSystemAnalysis">StableDroneSystemAnalysis</a>,
+    <a href="https://github.com/DenisDrobyshev/ScrollStop">ScrollStop</a>,
+    <a href="https://github.com/DenisDrobyshev/marginpilot">marginpilot</a>,
+    <a href="https://github.com/DenisDrobyshev/sellerhelper">sellerhelper</a>.
+  </p>
+
+  <h2>Опыт</h2>
+
+  <div class="job">
+    <div class="top">
+      <span class="what">Разработчик / DevOps</span>
+      <span class="when">2026</span>
+    </div>
+    <div class="where">МИИГАиК, департамент информационных технологий · группа разработки и сопровождения систем</div>
+    <ul>
+      <li>Выкатил Django-портал во внутреннюю инфраструктуру вуза: PostgreSQL, Gunicorn за Nginx, раздача статики и медиа.</li>
+      <li>Подключил единый вход через корпоративный аккаунт по OpenID Connect.</li>
+      <li>Перевёл проект из разработки в продакшен: вынес секреты, выключил debug, ограничил хосты, настроил системную почту.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="top">
+      <span class="what">Техник технической поддержки</span>
+      <span class="when">дек 2024 — янв 2026</span>
+    </div>
+    <div class="where">МИИГАиК, управление информатизации · 1 год 2 месяца</div>
+    <ul>
+      <li>Администрировал рабочие станции и серверы на Windows и Linux в домене Active Directory.</li>
+      <li>Писал автоматизацию на PowerShell и Bash для рутинных задач поддержки.</li>
+      <li>Держал технику в рабочем состоянии и настраивал рабочие места.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="top">
+      <span class="what">Бэкенд / веб-разработчик</span>
+      <span class="when">2023 — 2024</span>
+    </div>
+    <div class="where">Внутренние системы МИИГАиК</div>
+    <ul>
+      <li>Сервис расписания занятий: большой SQL-запрос, собиравший расписание из нескольких связанных таблиц, встроен во внутренние Go-сервисы вуза.</li>
+      <li>Личный кабинет студента: расписание, зачётка, профиль и новости, адаптивный интерфейс.</li>
+      <li>Работа внутри существующей инфраструктуры: чужой код, чужие соглашения, изменения должны были встать в остальную систему.</li>
+    </ul>
+  </div>
+
+  <h2>Образование</h2>
+
+  <div class="job">
+    <div class="top">
+      <span class="what">Бакалавр, прикладная информатика (09.03.03)</span>
+      <span class="when">2022 — 2026</span>
+    </div>
+    <div class="where">МИИГАиК — Московский государственный университет геодезии и картографии, факультет геоинформатики и информационной безопасности</div>
+  </div>
+
+  <div class="job">
+    <div class="top">
+      <span class="what">Разработка геоинформационных решений с использованием методов ИИ</span>
+      <span class="when">дек 2024 — дек 2025</span>
+    </div>
+    <div class="where">Цифровая кафедра МИИГАиК · квалификация «Специалист по большим данным»</div>
+  </div>
+
+  <h2>Стек</h2>
+  <div class="job">
+    <p class="rest">
+      <b>Основное:</b> Python · Django · FastAPI · PostgreSQL · SQL · Docker · Nginx · Gunicorn · Linux · Git<br />
+      <b>Также:</b> Go · JavaScript · TypeScript · React · Vue · Java<br />
+      <b>ML и CV:</b> PyTorch · TensorFlow · scikit-learn · OpenCV · YOLO · pandas · NumPy<br />
+      <b>Инфраструктура:</b> PowerShell · Bash · Active Directory · GitHub Actions
+    </p>
+  </div>
+
+  <footer>
+    Москва · удалённо или гибрид ·
+    <a href="mailto:drobishev.denis@icloud.com">drobishev.denis@icloud.com</a>
   </footer>
 
-  <script src="assets/script.js" defer></script>
+</div>
 </body>
 </html>

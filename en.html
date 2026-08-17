@@ -1,409 +1,315 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Denis Drobyshev — Backend / Python / ML Developer</title>
-  <meta name="description" content="Denis Drobyshev — backend developer in Python (Django, FastAPI, NestJS). Project portfolio: full-stack ARC ecosystem, academic journal portal, RL library, ML and computer vision." />
+  <title>Denis Drobyshev</title>
+  <meta name="description" content="Denis Drobyshev — fullstack developer: Python, Django, FastAPI, React. Open source: libraries for ML, LLM agents and operational decisions." />
   <meta name="author" content="Denis Drobyshev" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://denisdrobyshev.github.io/portfolio/en.html" />
-  <meta property="og:title" content="Denis Drobyshev — Backend / Python / ML Developer" />
-  <meta property="og:description" content="Portfolio: full-stack ecosystem, Django/FastAPI portals, RL library, ML and computer vision." />
+  <meta property="og:title" content="Denis Drobyshev" />
+  <meta property="og:description" content="Fullstack developer: Python, Django, FastAPI, React. Open source: libraries for ML, LLM agents and operational decisions." />
   <meta property="og:image" content="https://denisdrobyshev.github.io/portfolio/assets/avatar.jpg" />
   <link rel="alternate" hreflang="en" href="https://denisdrobyshev.github.io/portfolio/en.html" />
   <link rel="alternate" hreflang="ru" href="https://denisdrobyshev.github.io/portfolio/index.html" />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="preload" href="assets/styles.css" as="style" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <!-- ===== Header ===== -->
-  <header class="site-header" id="top">
-    <a href="#top" class="brand" aria-label="Back to top">
-      <span class="brand-mark">dd</span>
-      <span class="brand-name">Denis Drobyshev</span>
-    </a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#skills">Stack</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="lang-switch" aria-label="Language">
-      <a href="index.html">RU</a>
-      <a class="is-active" href="en.html" aria-current="page">EN</a>
-    </div>
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
-      <span class="theme-icon">☾</span>
-    </button>
-  </header>
+<div class="wrap">
 
-  <main>
-    <!-- ===== Hero ===== -->
-    <section class="hero">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <div class="hero-text reveal">
-          <p class="eyebrow">Backend&nbsp;·&nbsp;Python&nbsp;·&nbsp;ML&nbsp;·&nbsp;Moscow</p>
-          <h1>Denis <span class="grad">Drobyshev</span></h1>
-          <p class="lead">
-            Backend developer in Python. I take a project the whole way: database design,
-            server logic, API, interface, Docker, and deployment to a real server.
-          </p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="mailto:drobishev.denis@icloud.com">Email me</a>
-            <a class="btn btn-ghost" href="resume-en.html" target="_blank" rel="noopener">CV&nbsp;↗</a>
-            <a class="btn btn-ghost" href="https://github.com/DenisDrobyshev" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
-          </div>
-          <ul class="hero-badges" aria-label="Status">
-            <li><span class="dot"></span> Open to work</li>
-          </ul>
-        </div>
-        <div class="hero-avatar reveal">
-          <div class="avatar-ring">
-            <img src="assets/avatar.jpg" alt="Photo of Denis Drobyshev" width="220" height="220" loading="eager" />
-          </div>
-        </div>
-      </div>
+  <span class="lang"><a href="index.html">Русский</a></span>
 
-      <ul class="stats" aria-label="Key numbers">
-        <li class="reveal"><b>5</b><span>released open-source projects</span></li>
-        <li class="reveal"><b>400+</b><span>automated tests</span></li>
-        <li class="reveal"><b>30+</b><span>RL algorithms from scratch</span></li>
-        <li class="reveal"><b>1+</b><span>year in IT infrastructure</span></li>
-      </ul>
-    </section>
-
-    <!-- ===== About ===== -->
-    <section id="about" class="section">
-      <h2 class="section-title"><span class="num">01</span> About me</h2>
-      <div class="about-grid">
-        <div class="reveal">
-          <p>
-            Applied Informatics graduate from MIIGAiK (2026). Spent over a year in MIIGAiK
-            technical support (Windows/Linux administration, scripting, Active Directory)
-            and I'm moving into <strong>backend development in Python</strong>. I confidently
-            take a project from idea to production: data schema, business logic, REST&nbsp;API,
-            frontend, containerization and deployment.
-          </p>
-          <p>
-            Beyond the backend I build machine learning and computer vision projects — from
-            image classifiers to real-time detection on a video stream. I write tests, keep
-            the code clean and set up CI.
-          </p>
-        </div>
-        <div class="about-facts reveal">
-          <div class="fact"><span>Location</span><b>Moscow</b></div>
-          <div class="fact"><span>Education</span><b>MIIGAiK, 2022–2026</b></div>
-          <div class="fact"><span>Status</span><b>Available immediately</b></div>
-          <div class="fact"><span>Languages</span><b>Russian, English</b></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Skills ===== -->
-    <section id="skills" class="section">
-      <h2 class="section-title"><span class="num">02</span> Tech stack</h2>
-
-      <div class="badges reveal" aria-label="Technologies">
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white" alt="Django" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white" alt="FastAPI" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat&logo=nestjs&logoColor=white" alt="NestJS" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" alt="React" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white" alt="Redis" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=white" alt="Nginx" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white" alt="PyTorch" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white" alt="scikit-learn" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux" height="22" loading="lazy" />
-        <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" alt="Git" height="22" loading="lazy" />
-      </div>
-
-      <div class="skills-grid">
-        <article class="skill-card reveal">
-          <h3>Languages</h3>
-          <ul class="tags">
-            <li>Python</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>Java</li><li>Dart</li>
-          </ul>
-        </article>
-        <article class="skill-card reveal">
-          <h3>Backend</h3>
-          <ul class="tags">
-            <li>Django</li><li>FastAPI</li><li>NestJS</li><li>REST API</li>
-            <li>async SQLAlchemy</li><li>Prisma</li><li>JWT / OAuth / OIDC</li>
-          </ul>
-        </article>
-        <article class="skill-card reveal">
-          <h3>Data & ML</h3>
-          <ul class="tags">
-            <li>PyTorch</li><li>TensorFlow / Keras</li><li>scikit-learn</li>
-            <li>NumPy</li><li>Pandas</li><li>OpenCV</li><li>YOLO</li><li>InsightFace</li>
-          </ul>
-        </article>
-        <article class="skill-card reveal">
-          <h3>Databases</h3>
-          <ul class="tags">
-            <li>PostgreSQL</li><li>Redis</li><li>SQLite</li><li>MinIO / S3</li>
-          </ul>
-        </article>
-        <article class="skill-card reveal">
-          <h3>Frontend</h3>
-          <ul class="tags">
-            <li>React</li><li>Vue / Nuxt</li><li>Vite</li><li>Tailwind</li><li>HTML / CSS</li>
-          </ul>
-        </article>
-        <article class="skill-card reveal">
-          <h3>DevOps & tools</h3>
-          <ul class="tags">
-            <li>Docker</li><li>docker-compose</li><li>Nginx</li><li>Gunicorn</li>
-            <li>Linux</li><li>Git</li><li>GitHub Actions</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== Projects ===== -->
-    <section id="projects" class="section">
-      <h2 class="section-title"><span class="num">03</span> Projects</h2>
-
-      <article class="showcase reveal">
-        <span class="showcase-label">Flagship project · thesis work</span>
-        <h3>GiA — academic journal portal</h3>
-        <p>
-          An information portal for “Izvestia vuzov. Geodesy and Aerophotography” with
-          issue-archive management: an auto-generated admin panel, SSO / OpenID Connect,
-          protection against CSRF/XSS/SQLi, XML metadata export, pyramid testing.
-          Deployed to the MIIGAiK IT Department test server (PostgreSQL, Gunicorn, Nginx).
-        </p>
-        <ul class="tags">
-          <li>Django</li><li>PostgreSQL</li><li>Docker</li><li>Nginx</li><li>Gunicorn</li><li>OIDC</li>
-        </ul>
-        <span class="proj-note">private repository</span>
-      </article>
-
-      <div class="filters" role="tablist" aria-label="Project filter">
-        <button class="filter is-active" data-filter="all" type="button">All</button>
-        <button class="filter" data-filter="backend" type="button">Backend</button>
-        <button class="filter" data-filter="ml" type="button">ML / CV</button>
-        <button class="filter" data-filter="frontend" type="button">Frontend</button>
-        <button class="filter" data-filter="mobile" type="button">Mobile</button>
-        <button class="filter" data-filter="other" type="button">Other</button>
-      </div>
-
-      <div class="proj-grid" id="projGrid">
-        <!-- Larger projects -->
-        <div class="proj proj--static" data-cat="backend">
-          <h3>ARC</h3>
-          <p>A 5-module ecosystem (fitness, library, messenger, social feed, dating) on a shared core: JWT auth, a realtime WebSocket messenger, media in S3, a Pro subscription and referrals, CI and deployment.</p>
-          <div class="proj-tags">React · TypeScript · NestJS · PostgreSQL · Redis · Docker</div>
-          <span class="proj-note">private repository</span>
-        </div>
-        <a class="proj" data-cat="ml" href="https://denisdrobyshev.github.io/decisionrl/" target="_blank" rel="noopener">
-          <h3>decisionrl</h3>
-          <p>RL for operational decisions (pricing, inventory, energy, queues, supply chains): each environment ships with its classical baseline. The learned policy beats the strong baseline on 5 tasks and matches the exact DP optimum where one exists; parity with Stable-Baselines3 on CartPole. 31 algorithms, 20 environments, 385 tests, 86% coverage, published on PyPI.</p>
-          <div class="proj-tags">PyTorch · NumPy · pytest · MkDocs</div>
-        </a>
-        <a class="proj" data-cat="backend" href="https://github.com/DenisDrobyshev/approval-service" target="_blank" rel="noopener">
-          <h3>approval-service</h3>
-          <p>A backend content-approval service: idempotency, a state machine, an audit log, a transactional outbox, multi-tenant isolation, 39 tests.</p>
-          <div class="proj-tags">FastAPI · SQLAlchemy 2.0 · Alembic · PostgreSQL</div>
-        </a>
-
-        <!-- ML / CV -->
-        <a class="proj" data-cat="ml" href="https://github.com/DenisDrobyshev/Detector_app" target="_blank" rel="noopener">
-          <h3>Detector_app</h3>
-          <p>Real-time discipline monitoring from a video stream: YOLO + InsightFace, Streamlit, CSV reports.</p>
-          <div class="proj-tags">YOLO · InsightFace · Streamlit</div>
-        </a>
-        <a class="proj" data-cat="ml" href="https://github.com/DenisDrobyshev/Geomarketing_analysis" target="_blank" rel="noopener">
-          <h3>Geomarketing_analysis</h3>
-          <p>Geomarketing ML analytics: finding the optimal location for a fitness center.</p>
-          <div class="proj-tags">scikit-learn · OpenStreetMap · H3</div>
-        </a>
-        <a class="proj" data-cat="ml" href="https://github.com/DenisDrobyshev/classification_animals" target="_blank" rel="noopener">
-          <h3>classification_animals</h3>
-          <p>Image classifier: comparing Dense / CNN / VGG (F1 0.88), deployed on Streamlit + FastAPI.</p>
-          <div class="proj-tags">TensorFlow · Keras · FastAPI</div>
-        </a>
-        <a class="proj" data-cat="ml" href="https://github.com/DenisDrobyshev/CIFAR10" target="_blank" rel="noopener">
-          <h3>CIFAR10</h3>
-          <p>CIFAR-10 image classification — a computer vision task.</p>
-          <div class="proj-tags">Deep Learning · CV</div>
-        </a>
-        <a class="proj" data-cat="ml" href="https://github.com/DenisDrobyshev/universum" target="_blank" rel="noopener">
-          <h3>universum</h3>
-          <p>Neural network and deep learning coursework from the final semester.</p>
-          <div class="proj-tags">Neural Networks · Jupyter</div>
-        </a>
-
-        <!-- Backend -->
-        <a class="proj" data-cat="backend" href="https://github.com/DenisDrobyshev/excel-to-db-converter" target="_blank" rel="noopener">
-          <h3>excel-to-db-converter</h3>
-          <p>A FastAPI web app: converting Excel into database tables with auth and validation.</p>
-          <div class="proj-tags">FastAPI · REST · Backend</div>
-        </a>
-        <a class="proj" data-cat="backend" href="https://github.com/DenisDrobyshev/StreamlitFastAPI_app" target="_blank" rel="noopener">
-          <h3>StreamlitFastAPI_app</h3>
-          <p>A demo pairing a Streamlit frontend with a FastAPI backend.</p>
-          <div class="proj-tags">FastAPI · Streamlit</div>
-        </a>
-
-        <!-- Frontend -->
-        <a class="proj" data-cat="frontend" href="https://github.com/DenisDrobyshev/chinese-premium-store" target="_blank" rel="noopener">
-          <h3>chinese-premium-store</h3>
-          <p>A premium online store in React: catalog with filters, cart, favorites.</p>
-          <div class="proj-tags">React · React Router · Context</div>
-        </a>
-        <a class="proj" data-cat="frontend" href="https://github.com/DenisDrobyshev/veloshop" target="_blank" rel="noopener">
-          <h3>veloshop</h3>
-          <p>A bicycle store in Vue / Nuxt.</p>
-          <div class="proj-tags">Vue · Nuxt</div>
-        </a>
-        <a class="proj" data-cat="frontend" href="https://github.com/DenisDrobyshev/store" target="_blank" rel="noopener">
-          <h3>store</h3>
-          <p>A learning online store in React.</p>
-          <div class="proj-tags">React · JavaScript</div>
-        </a>
-        <a class="proj" data-cat="frontend" href="https://github.com/DenisDrobyshev/miigaik-lk" target="_blank" rel="noopener">
-          <h3>miigaik-lk</h3>
-          <p>A MIIGAiK student dashboard: schedule, grade book, profile.</p>
-          <div class="proj-tags">HTML · CSS · JS</div>
-        </a>
-
-        <!-- Mobile -->
-        <a class="proj" data-cat="mobile" href="https://github.com/DenisDrobyshev/ToDoshka" target="_blank" rel="noopener">
-          <h3>ToDoshka</h3>
-          <p>A cross-platform todo app in Flutter.</p>
-          <div class="proj-tags">Flutter · Dart</div>
-        </a>
-        <a class="proj" data-cat="mobile" href="https://github.com/DenisDrobyshev/flutter_dev" target="_blank" rel="noopener">
-          <h3>flutter_dev</h3>
-          <p>A learning cross-platform app in Flutter.</p>
-          <div class="proj-tags">Flutter · Dart</div>
-        </a>
-
-        <!-- Other -->
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/StableDroneSystemAnalysis" target="_blank" rel="noopener">
-          <h3>StableDroneSystemAnalysis</h3>
-          <p>Stability analysis of UAV dynamic systems: modeling, eigenvalues, GUI.</p>
-          <div class="proj-tags">Python · NumPy · Control</div>
-        </a>
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/FunctionSketch" target="_blank" rel="noopener">
-          <h3>FunctionSketch</h3>
-          <p>Recognizing a math function from a hand-drawn graph; export to LaTeX/Excel.</p>
-          <div class="proj-tags">Python · Math · GUI</div>
-        </a>
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/Space_Game" target="_blank" rel="noopener">
-          <h3>Space_Game</h3>
-          <p>A space shooter in Python (Pygame).</p>
-          <div class="proj-tags">Python · Pygame</div>
-        </a>
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/game_3072" target="_blank" rel="noopener">
-          <h3>game_3072</h3>
-          <p>A 3072 puzzle game (inspired by 2048) in Java.</p>
-          <div class="proj-tags">Java · Puzzle</div>
-        </a>
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/Flappy_Bird" target="_blank" rel="noopener">
-          <h3>Flappy_Bird</h3>
-          <p>A Flappy Bird clone in Python.</p>
-          <div class="proj-tags">Python · Pygame</div>
-        </a>
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/English_Learn" target="_blank" rel="noopener">
-          <h3>English_Learn</h3>
-          <p>An English vocabulary learning app in Python.</p>
-          <div class="proj-tags">Python · Education</div>
-        </a>
-        <a class="proj" data-cat="other" href="https://github.com/DenisDrobyshev/Office_Tweaks" target="_blank" rel="noopener">
-          <h3>Office_Tweaks</h3>
-          <p>A utility for automating office tasks in Python.</p>
-          <div class="proj-tags">Python · Automation</div>
-        </a>
-      </div>
-
-      <p class="proj-more reveal">
-        The full list — 41 repositories on GitHub.
-        <a href="https://github.com/DenisDrobyshev?tab=repositories" target="_blank" rel="noopener">Open profile ↗</a>
+  <section class="intro">
+    <img src="assets/avatar.jpg" alt="Denis Drobyshev" width="132" height="132" />
+    <div>
+      <h1>Denis Drobyshev</h1>
+      <p>
+        Hi! I'm a fullstack developer. I write backends in Python — Django and
+        FastAPI, PostgreSQL underneath, Docker and Nginx in front — and take
+        projects all the way: schema, API, interface, deployment to a real server.
       </p>
-    </section>
-
-    <!-- ===== Experience & Education ===== -->
-    <section id="experience" class="section">
-      <h2 class="section-title"><span class="num">04</span> Experience & education</h2>
-      <div class="timeline">
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <h3>Internship — IT Department, MIIGAiK</h3>
-              <span class="tl-date">May – Jun 2026</span>
-            </div>
-            <p>
-              Deployed the GiA portal to a test server: PostgreSQL, Gunicorn, Nginx.
-              Configured SSO. Worked with the organization's real infrastructure.
-            </p>
-          </div>
-        </div>
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <h3>Technical Support Technician — MIIGAiK</h3>
-              <span class="tl-date">Dec 2024 – Jan 2026</span>
-            </div>
-            <p>
-              Maintenance and repair of computer equipment, Windows/Linux system
-              administration, PowerShell and Bash scripting, Active Directory,
-              diagnostics and software setup. 1 year 2 months.
-            </p>
-          </div>
-        </div>
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-top">
-              <h3>MIIGAiK — B.Sc., Applied Informatics (09.03.03)</h3>
-              <span class="tl-date">2022 – 2026</span>
-            </div>
-            <p>
-              Moscow State University of Geodesy and Cartography.
-              Thesis — an information portal for an academic journal in Django (the GiA project).
-            </p>
-          </div>
-        </div>
+      <p>
+        The other half of my time goes into open source: libraries for machine
+        learning, LLM agents and operational decisions. Five projects under tagged
+        releases, three packages on PyPI. Computer vision shows up too — real-time
+        detection on video, image classifiers, geospatial analysis on open data.
+      </p>
+      <p>
+        Currently open to backend and fullstack roles.
+      </p>
+      <div class="links">
+        <a href="https://github.com/DenisDrobyshev">GitHub</a><span class="sep">·</span>
+        <a href="https://github.com/DrobyshevDev">DrobyshevDev</a><span class="sep">·</span>
+        <a href="https://t.me/multiheadselfattention">Telegram</a><span class="sep">·</span>
+        <a href="https://career.habr.com/denisdrobyshev">Habr Career</a><span class="sep">·</span>
+        <a href="resume-en.html">CV</a><span class="sep">·</span>
+        <a href="mailto:drobishev.denis@icloud.com">drobishev.denis@icloud.com</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ===== Contact ===== -->
-    <section id="contact" class="section contact">
-      <div class="contact-card reveal">
-        <h2>Let's get in touch</h2>
-        <p>Open to backend and fullstack offers. I reply quickly.</p>
-        <div class="contact-links">
-          <a class="btn btn-primary" href="mailto:drobishev.denis@icloud.com">drobishev.denis@icloud.com</a>
-          <a class="btn btn-ghost" href="https://t.me/multiheadselfattention" target="_blank" rel="noopener">Telegram ↗</a>
-          <a class="btn btn-ghost" href="https://github.com/DenisDrobyshev" target="_blank" rel="noopener">GitHub ↗</a>
-          <a class="btn btn-ghost" href="https://career.habr.com/denisdrobyshev" target="_blank" rel="noopener">Habr Career ↗</a>
-          <a class="btn btn-ghost" href="resume-en.html" target="_blank" rel="noopener">CV EN ↗</a>
-          <a class="btn btn-ghost" href="resume.html" target="_blank" rel="noopener">Résumé RU ↗</a>
-        </div>
+  <h2>News</h2>
+  <div class="news">
+    <div class="row">
+      <div class="when">9 August 2026</div>
+      <p class="what">📦 <a href="https://github.com/DrobyshevDev/stadion">stadion</a> v0.1.0 is out — a proving ground where an agent is measured against the tuned classical method and the exact optimum, not against a leaderboard. On PyPI as <code>stadion-rl</code>.</p>
+    </div>
+    <div class="row">
+      <div class="when">31 July 2026</div>
+      <p class="what">📦 Two releases at once: <a href="https://github.com/DrobyshevDev/praxis">praxis</a> v0.1.0, a legal assistant with verified citations, and <a href="https://github.com/DrobyshevDev/mlango">mlango</a> v0.2.0.</p>
+    </div>
+    <div class="row">
+      <div class="when">24 July 2026</div>
+      <p class="what">📦 <a href="https://github.com/DrobyshevDev/glia">glia</a> v0.8.2 — a glass-box library for LLM agents, zero-dependency core.</p>
+    </div>
+    <div class="row">
+      <div class="when">18 July 2026</div>
+      <p class="what">📦 <a href="https://github.com/DrobyshevDev/decisionrl">decisionrl</a> v0.4.0: 31 algorithms, 22 environments, 400 tests, 86% coverage.</p>
+    </div>
+    <div class="row">
+      <div class="when">summer 2026</div>
+      <p class="what">🎓 Defended my thesis and shipped the academic journal portal onto MIIGAiK infrastructure — it runs there now.</p>
+    </div>
+  </div>
+
+  <h2>Open source</h2>
+  <p class="rest">
+    The libraries and tooling live in the
+    <a href="https://github.com/DrobyshevDev">DrobyshevDev</a> organisation: typed,
+    tested in CI, published under tagged releases.
+  </p>
+
+  <div class="entry">
+    <div><span class="chip">PyPI</span></div>
+    <div>
+      <h3>decisionrl</h3>
+      <p>Reinforcement learning for operational decisions: pricing, inventory, energy, queues, supply chains. Every applied environment ships with its classical operations-research baseline, so a policy is measured against the standard method rather than asserted to be good.</p>
+      <div class="stack">Python · PyTorch · NumPy · Gymnasium</div>
+      <div class="more">
+        <a href="https://github.com/DrobyshevDev/decisionrl">GitHub</a><span class="sep">•</span>
+        <a href="https://pypi.org/project/decisionrl/">PyPI</a><span class="sep">•</span>
+        <a href="https://drobyshevdev.github.io/decisionrl/">docs</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
 
-  <footer class="site-footer">
-    <span>© <span id="year"></span> Denis Drobyshev · Moscow</span>
-    <img class="counter" src="https://visitor-badge.laobi.icu/badge?page_id=denisdrobyshev.portfolio&left_text=visitors&left_color=%23131b2b&right_color=%235179c0" alt="Visitor counter" loading="lazy" onerror="this.style.display='none'" />
-    <a href="#top">Top ↑</a>
+  <div class="entry">
+    <div><span class="chip">PyPI</span></div>
+    <div>
+      <h3>stadion</h3>
+      <p>A proving ground for operational decisions: agents are scored against the tuned classical method and the exact optimum, with a confidence interval. "Indistinguishable" is a full verdict, not a failure.</p>
+      <div class="stack">Python · PyTorch · dynamic programming</div>
+      <div class="more">
+        <a href="https://github.com/DrobyshevDev/stadion">GitHub</a><span class="sep">•</span>
+        <a href="https://pypi.org/project/stadion-rl/">PyPI</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">PyPI</span></div>
+    <div>
+      <h3>mlango</h3>
+      <p>A framework for ML, analytics and LLM agents, built on Django's philosophy: you declare datasets, models and evaluations, the framework runs, versions and records them.</p>
+      <div class="stack">Python · MkDocs · GitHub Actions</div>
+      <div class="more">
+        <a href="https://github.com/DrobyshevDev/mlango">GitHub</a><span class="sep">•</span>
+        <a href="https://pypi.org/project/mlango/">PyPI</a><span class="sep">•</span>
+        <a href="https://drobyshevdev.github.io/mlango/">docs</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">release</span></div>
+    <div>
+      <h3>glia</h3>
+      <p>A glass-box library for building LLM agents: modern techniques as opt-in primitives, no hidden control flow, zero-dependency core.</p>
+      <div class="stack">Python · zero-dependency core</div>
+      <div class="more">
+        <a href="https://github.com/DrobyshevDev/glia">GitHub</a><span class="sep">•</span>
+        <a href="https://drobyshevdev.github.io/glia/">docs</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">release</span></div>
+    <div>
+      <h3>praxis</h3>
+      <p>A legal assistant for Russian law whose citations are verified rather than asserted: hybrid retrieval with reranking, an NLI citation verifier, GraphRAG over cross-references.</p>
+      <div class="stack">Python · FastAPI · RAG · Docker</div>
+      <div class="more">
+        <a href="https://github.com/DrobyshevDev/praxis">GitHub</a><span class="sep">•</span>
+        <a href="https://github.com/DrobyshevDev/praxis/releases/latest">release</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">course</span></div>
+    <div>
+      <h3>lemma</h3>
+      <p>A free course: a road map through ML, DL and RL, from zero to reading and reproducing research. 27 modules, notebooks checked in CI. In Russian.</p>
+      <div class="stack">MkDocs · Jupyter · GitHub Actions</div>
+      <div class="more">
+        <a href="https://github.com/DrobyshevDev/lemma">GitHub</a><span class="sep">•</span>
+        <a href="https://drobyshevdev.github.io/lemma/">course site</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>Projects</h2>
+
+  <div class="entry">
+    <div><span class="chip">in prod</span></div>
+    <div>
+      <h3>GiA — academic journal portal</h3>
+      <p>A portal for <i>Izvestia Vuzov. Geodesy and Aerophotography</i> with an issue archive: a generated admin panel for the editorial team, corporate SSO, role-based access, XML metadata export for bibliographic indexing. My thesis project, deployed on the university server.</p>
+      <div class="stack">Python · Django · PostgreSQL · Docker · Nginx · Gunicorn · OIDC</div>
+      <div class="more"><span class="rest">private repository, demo on request</span></div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">5 modules</span></div>
+    <div>
+      <h3>ARC</h3>
+      <p>An ecosystem of five modules on a shared core: fitness, library, messenger, social network, dating. JWT auth, a realtime messenger over WebSocket, media in S3, subscriptions and referrals, CI and deployment.</p>
+      <div class="stack">Python · FastAPI · PostgreSQL · WebSocket · S3 · Docker</div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">backend</span></div>
+    <div>
+      <h3>approval-service</h3>
+      <p>A content approval service: content moves through a state machine, every transition lands in an audit log, and events leave through a transactional outbox. Idempotency-Key support, per-workspace multi-tenant isolation, secrets redacted in logs.</p>
+      <div class="stack">Python · FastAPI · async SQLAlchemy 2.0 · Alembic · PostgreSQL · pytest</div>
+      <div class="more"><a href="https://github.com/DenisDrobyshev/approval-service">GitHub</a></div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">CV</span></div>
+    <div>
+      <h3>Detector_app</h3>
+      <p>Finds events in the frame live: YOLO for detection, InsightFace for face recognition. Works with a webcam or a video file and produces CSV reports.</p>
+      <div class="stack">Python · YOLO · InsightFace · OpenCV · Streamlit</div>
+      <div class="more"><a href="https://github.com/DenisDrobyshev/Detector_app">GitHub</a></div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">ML</span></div>
+    <div>
+      <h3>Geomarketing_analysis</h3>
+      <p>A pipeline that suggests where to open a fitness centre: OpenStreetMap data, an H3 hex grid, an attractiveness model in scikit-learn, interactive maps.</p>
+      <div class="stack">Python · scikit-learn · H3 · OSMnx · GeoPandas</div>
+      <div class="more"><a href="https://github.com/DenisDrobyshev/Geomarketing_analysis">GitHub</a></div>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><span class="chip">CV</span></div>
+    <div>
+      <h3>classification_animals</h3>
+      <p>Three architectures compared — dense, plain CNN, VGG-style. Best F1 0.88. Inference served through FastAPI behind a Streamlit interface.</p>
+      <div class="stack">Python · TensorFlow/Keras · FastAPI · Streamlit</div>
+      <div class="more"><a href="https://github.com/DenisDrobyshev/classification_animals">GitHub</a></div>
+    </div>
+  </div>
+
+  <p class="rest">
+    Also:
+    <a href="https://github.com/DenisDrobyshev/excel-to-db-converter">excel-to-db-converter</a>,
+    <a href="https://github.com/DenisDrobyshev/miigaik-lk">miigaik-lk</a>,
+    <a href="https://github.com/DenisDrobyshev/StreamlitFastAPI_app">StreamlitFastAPI_app</a>,
+    <a href="https://github.com/DenisDrobyshev/FunctionSketch">FunctionSketch</a>,
+    <a href="https://github.com/DenisDrobyshev/StableDroneSystemAnalysis">StableDroneSystemAnalysis</a>,
+    <a href="https://github.com/DenisDrobyshev/ScrollStop">ScrollStop</a>,
+    <a href="https://github.com/DenisDrobyshev/marginpilot">marginpilot</a>,
+    <a href="https://github.com/DenisDrobyshev/sellerhelper">sellerhelper</a>.
+  </p>
+
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="top">
+      <span class="what">Developer / DevOps</span>
+      <span class="when">2026</span>
+    </div>
+    <div class="where">MIIGAiK, IT department · systems development and support group</div>
+    <ul>
+      <li>Deployed a Django portal on the university's internal infrastructure: PostgreSQL, Gunicorn behind Nginx, static and media serving.</li>
+      <li>Set up single sign-on with the corporate university account over OpenID Connect.</li>
+      <li>Moved the project from development to production: secrets pulled out, debug off, allowed hosts restricted, system mail configured.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="top">
+      <span class="what">IT support technician</span>
+      <span class="when">Dec 2024 — Jan 2026</span>
+    </div>
+    <div class="where">MIIGAiK, Informatisation Office · 1 year 2 months</div>
+    <ul>
+      <li>Administered Windows and Linux workstations and servers in an Active Directory domain.</li>
+      <li>Wrote PowerShell and Bash automation for routine support work.</li>
+      <li>Kept the hardware running and set workplaces up.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="top">
+      <span class="what">Backend / web developer</span>
+      <span class="when">2023 — 2024</span>
+    </div>
+    <div class="where">Internal university systems, MIIGAiK</div>
+    <ul>
+      <li>Class schedule service: a large SQL query that assembled the timetable from several related tables, integrated into the university's internal Go services.</li>
+      <li>Student personal account: schedule, grade book, profile and news, with a responsive interface.</li>
+      <li>Work inside an existing infrastructure: other people's code, other people's conventions, changes that had to fit the rest of the system.</li>
+    </ul>
+  </div>
+
+  <h2>Education</h2>
+
+  <div class="job">
+    <div class="top">
+      <span class="what">B.Sc. in Applied Informatics (09.03.03)</span>
+      <span class="when">2022 — 2026</span>
+    </div>
+    <div class="where">MIIGAiK — Moscow State University of Geodesy and Cartography, Department of Geoinformatics and Information Security</div>
+  </div>
+
+  <div class="job">
+    <div class="top">
+      <span class="what">Geoinformation solutions with AI methods</span>
+      <span class="when">Dec 2024 — Dec 2025</span>
+    </div>
+    <div class="where">MIIGAiK Digital Department · qualification "Big Data Specialist"</div>
+  </div>
+
+  <h2>Stack</h2>
+  <div class="job">
+    <p class="rest">
+      <b>Core:</b> Python · Django · FastAPI · PostgreSQL · SQL · Docker · Nginx · Gunicorn · Linux · Git<br />
+      <b>Also:</b> Go · JavaScript · TypeScript · React · Vue · Java<br />
+      <b>ML and CV:</b> PyTorch · TensorFlow · scikit-learn · OpenCV · YOLO · pandas · NumPy<br />
+      <b>Infrastructure:</b> PowerShell · Bash · Active Directory · GitHub Actions
+    </p>
+  </div>
+
+  <footer>
+    Moscow · remote or hybrid ·
+    <a href="mailto:drobishev.denis@icloud.com">drobishev.denis@icloud.com</a>
   </footer>
 
-  <script src="assets/script.js" defer></script>
+</div>
 </body>
 </html>

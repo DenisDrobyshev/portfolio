@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0d1017"/>
-  <rect x="5" y="5" width="54" height="54" rx="10" fill="none" stroke="#6a8ec9" stroke-width="2.5"/>
-  <text x="50%" y="53%" dominant-baseline="central" text-anchor="middle"
-        font-family="ui-monospace, SFMono-Regular, Consolas, monospace"
-        font-size="26" font-weight="600" fill="#6a8ec9">dd</text>
+  <rect width="64" height="64" rx="13" fill="#146ebe"/>
+  <g fill="#ffffff">
+    <rect x="15" y="36" width="9" height="14" rx="2.5"/>
+    <rect x="27.5" y="26" width="9" height="24" rx="2.5"/>
+    <rect x="40" y="14" width="9" height="36" rx="2.5"/>
+  </g>
 </svg>
