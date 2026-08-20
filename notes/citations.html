@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Citations you can check — Denis Drobyshev</title>
+<meta name="description" content="Why a legal assistant should return the text of the law with every citation verified, not a confident paraphrase." />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/styles-mt.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav container">
+    <a href="../index.html">About</a>
+    <a class="active" href="../notes.html">Notes</a>
+    <a href="../photos.html">Photos</a>
+    <a href="https://github.com/DenisDrobyshev">GitHub</a>
+  </nav>
+</header>
+
+<main class="site-main container">
+
+  <a class="back-link" href="../notes.html">← All notes</a>
+
+  <div class="post-header">
+    <h1>Citations you can check</h1>
+    <div class="post-meta">20 August 2026 · 2 min read</div>
+  </div>
+
+  <article class="post-content">
+    <p>An LLM answers a legal question and cites an article of the law. It sounds confident. The problem is that the article can be invented: the right format, the right tone, a norm that does not exist. For legal work that is a disqualifying flaw.</p>
+
+    <p>In <a href="https://github.com/DrobyshevDev/praxis">praxis</a> the default answer is extractive: it is the text of the law itself, not the model's paraphrase. It cannot hallucinate, because it generates nothing — it quotes. A separate step checks every citation: an NLI model decides whether the norm actually supports the claim, not just resembles it in words. A reference that sounds plausible but is off-point is cut, not sent to the user.</p>
+
+    <p>Retrieval is hybrid: lexical plus dense, with a cross-encoder reranker on top. Quality is not asserted, it is measured on a golden set: recall@5 0.92, MRR 0.94, recomputed on every run.</p>
+
+    <p>An optional LLM layer exists — it makes the answer easier to read. But it passes the same citation check as the extractive one. Here the model is a convenience, not the source of truth.</p>
+  </article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>© 2026 Denis Drobyshev</span>
+    <span class="footer-links">
+      <a href="mailto:drobishev.denis@icloud.com">Email</a>
+      <a href="https://github.com/DenisDrobyshev">GitHub</a>
+      <a href="https://t.me/multiheadselfattention">Telegram</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

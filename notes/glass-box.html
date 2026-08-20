@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A glass box, not a black box — Denis Drobyshev</title>
+<meta name="description" content="Why an agent library should show its control flow instead of hiding it — the bet behind glia." />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/styles-mt.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav container">
+    <a href="../index.html">About</a>
+    <a class="active" href="../notes.html">Notes</a>
+    <a href="../photos.html">Photos</a>
+    <a href="https://github.com/DenisDrobyshev">GitHub</a>
+  </nav>
+</header>
+
+<main class="site-main container">
+
+  <a class="back-link" href="../notes.html">← All notes</a>
+
+  <div class="post-header">
+    <h1>A glass box, not a black box</h1>
+    <div class="post-meta">20 August 2026 · 2 min read</div>
+  </div>
+
+  <article class="post-content">
+    <p>Every agent framework collects the same complaint: too much abstraction, hidden control flow, painful to debug. Something happens on your behalf, and you cannot find where.</p>
+
+    <p><a href="https://github.com/DrobyshevDev/glia">glia</a> is the opposite bet. Every model call, every tool call, every state transition is a plain object: you can log it, snapshot it, replay it. No hidden control flow. The whole loop fits in one file you can read in an evening.</p>
+
+    <p>Modern techniques — planning, memory, tools — are here, but as opt-in primitives, not as default magic. You turn on what you need, and you can point at the line where it happens. The core has no dependencies.</p>
+
+    <p>The cost is honest: glia will not decide for you what the agent should be. It does not hide the decision — it shows it. For debugging and for understanding that is what you want; for "build me an agent with one button" it is not.</p>
+  </article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>© 2026 Denis Drobyshev</span>
+    <span class="footer-links">
+      <a href="mailto:drobishev.denis@icloud.com">Email</a>
+      <a href="https://github.com/DenisDrobyshev">GitHub</a>
+      <a href="https://t.me/multiheadselfattention">Telegram</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

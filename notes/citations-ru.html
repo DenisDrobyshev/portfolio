@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Цитаты, которые можно проверить — Денис Дробышев</title>
+<meta name="description" content="Почему юридический ассистент должен возвращать текст закона с проверенной цитатой, а не уверенный пересказ." />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/styles-mt.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav container">
+    <a href="../ru.html">Обо мне</a>
+    <a class="active" href="../notes-ru.html">Заметки</a>
+    <a href="../photos-ru.html">Фото</a>
+    <a href="https://github.com/DenisDrobyshev">GitHub</a>
+  </nav>
+</header>
+
+<main class="site-main container">
+
+  <a class="back-link" href="../notes-ru.html">← Все заметки</a>
+
+  <div class="post-header">
+    <h1>Цитаты, которые можно проверить</h1>
+    <div class="post-meta">20 августа 2026 · 2 мин чтения</div>
+  </div>
+
+  <article class="post-content">
+    <p>LLM отвечает на юридический вопрос и приводит статью закона. Звучит уверенно. Проблема в том, что статья может быть выдумана: правильный формат, правильный тон, несуществующая норма. Для юридической работы это дисквалифицирующий недостаток.</p>
+
+    <p>В <a href="https://github.com/DrobyshevDev/praxis">praxis</a> ответ по умолчанию — extractive: это текст самого закона, а не пересказ модели. Он не может галлюцинировать, потому что ничего не генерирует — он цитирует. Каждую цитату проверяет отдельный шаг: NLI-модель смотрит, действительно ли норма поддерживает утверждение, а не просто похожа по словам. Ссылка, которая звучит правдоподобно, но не по делу, отсекается, а не уходит пользователю.</p>
+
+    <p>Поиск гибридный: лексический плюс плотный, сверху кросс-энкодер-реранкер. Качество не заявляется, а меряется на золотом наборе: recall@5 0.92, MRR 0.94, и число пересчитывается на каждом прогоне.</p>
+
+    <p>Опциональный LLM-слой есть — он делает ответ читабельнее. Но проходит ту же проверку цитат, что и extractive. Модель здесь удобство, а не источник истины.</p>
+  </article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>© 2026 Денис Дробышев</span>
+    <span class="footer-links">
+      <a href="mailto:drobishev.denis@icloud.com">Email</a>
+      <a href="https://github.com/DenisDrobyshev">GitHub</a>
+      <a href="https://t.me/multiheadselfattention">Telegram</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
