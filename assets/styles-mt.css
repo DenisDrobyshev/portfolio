@@ -28,14 +28,14 @@ code{font-family:var(--font-mono);font-size:.875em;color:#ff7b72;background:#1a1
 .site-nav{display:flex;gap:var(--sp-xl);flex-wrap:wrap;justify-content:center}
 .site-nav a{color:var(--text-secondary);font-weight:500;padding:var(--sp-xs) 0;
             border-bottom:2px solid transparent;transition:all var(--transition)}
-.site-nav a:hover{color:var(--text-primary);border-bottom-color:var(--accent-primary)}
+.site-nav a:hover,.site-nav a.active{color:var(--text-primary);border-bottom-color:var(--accent-primary)}
 
 .site-main{flex:1;padding:var(--sp-2xl) 0}
 h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.3;color:var(--text-primary)}
 
 /* hero */
 .bio-top{display:flex;gap:var(--sp-2xl);align-items:flex-start;margin-bottom:var(--sp-xl)}
-.bio-photo img{width:230px;border-radius:8px}
+.bio-photo img{width:280px;border-radius:8px}
 .bio-content h1{font-size:2.5rem;font-weight:700;margin-bottom:var(--sp-xs)}
 .bio-tagline{font-size:1.15rem;color:var(--text-secondary);margin-bottom:var(--sp-lg)}
 .bio-content p{color:var(--text-primary);margin-bottom:var(--sp-md)}
@@ -44,7 +44,7 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.3;color:v
 .bio-links a{color:var(--accent-link)}
 .bio-links .sep{color:var(--text-muted)}
 @media(max-width:768px){.bio-top{flex-direction:column;align-items:center;text-align:center}
-  .bio-content h1{font-size:2rem}.bio-links{justify-content:center}}
+  .bio-content h1{font-size:2rem}.bio-links{justify-content:center}.bio-photo img{width:200px}}
 
 /* sections */
 .section{margin-top:var(--sp-3xl)}
