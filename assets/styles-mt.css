@@ -35,6 +35,8 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.3;color:v
 
 /* hero */
 .bio-top{display:flex;gap:var(--sp-2xl);align-items:flex-start;margin-bottom:var(--sp-xl)}
+.bio-photo{flex:0 0 auto}
+.bio-content{flex:1 1 auto;min-width:0}
 .bio-photo img{width:280px;border-radius:8px}
 .bio-content h1{font-size:2.5rem;font-weight:700;margin-bottom:var(--sp-xs)}
 .bio-tagline{font-size:1.15rem;color:var(--text-secondary);margin-bottom:var(--sp-lg)}
