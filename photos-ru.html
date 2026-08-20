@@ -51,8 +51,10 @@
 </main>
 
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Закрыть">×</button>
+  <button class="lightbox-close" id="lbClose" aria-label="Закрыть">×</button>
+  <button class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="Предыдущее">‹</button>
   <img id="lightboxImg" src="" alt="" />
+  <button class="lightbox-nav lightbox-next" id="lbNext" aria-label="Следующее">›</button>
 </div>
 
 <footer class="site-footer">
@@ -70,17 +72,26 @@
   (function(){
     var lb = document.getElementById('lightbox');
     var lbImg = document.getElementById('lightboxImg');
-    document.querySelectorAll('.masonry-item img').forEach(function(img){
-      img.parentElement.addEventListener('click', function(){
-        lbImg.src = img.src; lbImg.alt = img.alt; lb.classList.add('active');
-      });
+    var imgs = Array.prototype.slice.call(document.querySelectorAll('.masonry-item img'));
+    var idx = 0;
+    function show(i){ idx = (i + imgs.length) % imgs.length; lbImg.src = imgs[idx].src; lbImg.alt = imgs[idx].alt; }
+    imgs.forEach(function(img, i){
+      img.parentElement.addEventListener('click', function(){ show(i); lb.classList.add('active'); });
     });
     function close(){ lb.classList.remove('active'); lbImg.src = ''; }
-    document.getElementById('lightboxClose').addEventListener('click', close);
+    document.getElementById('lbClose').addEventListener('click', close);
+    document.getElementById('lbPrev').addEventListener('click', function(e){ e.stopPropagation(); show(idx-1); });
+    document.getElementById('lbNext').addEventListener('click', function(e){ e.stopPropagation(); show(idx+1); });
     lb.addEventListener('click', function(e){ if(e.target === lb) close(); });
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+    document.addEventListener('keydown', function(e){
+      if(!lb.classList.contains('active')) return;
+      if(e.key === 'Escape') close();
+      else if(e.key === 'ArrowLeft') show(idx-1);
+      else if(e.key === 'ArrowRight') show(idx+1);
+    });
   })();
 </script>
 
+<script src="assets/matrix.js" defer></script>
 </body>
 </html>
