@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>A baseline, not a leaderboard — Denis Drobyshev</title>
-<meta name="description" content="Why a policy for an operational problem is measured against its classical baseline, not against another agent on a leaderboard." />
+<meta name="description" content="Why a policy for an operational problem is measured against its classical baseline, not another agent on a leaderboard — with the numbers from decisionrl." />
 <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,17 +28,37 @@
 
   <div class="post-header">
     <h1>A baseline, not a leaderboard</h1>
-    <div class="post-meta">20 August 2026 · 2 min read</div>
+    <div class="post-meta">20 August 2026 · 5 min read</div>
   </div>
 
   <article class="post-content">
-    <p>An RL agent is almost always compared to something. Usually to another agent on a leaderboard: PPO against SAC, +12% on Atari. For research that is fine. For an operational problem it is almost useless.</p>
+    <p>An RL agent is almost always compared to something. Usually to another agent on a leaderboard: PPO against SAC, +12% on Atari. For research that is fine. For an operational problem — pricing, a warehouse, a queue — it is almost useless. The question is not which agent is newer. The question is whether a neural network beats the method the field has used for fifty years.</p>
 
-    <p>An inventory problem already has a base solution: the base-stock policy. It is decades old, it fits in two lines, and on stationary demand it is optimal. If your RL loses to base-stock, you have built a complicated way to do worse than a calculator. If it wins by one percent, the gap drowns in a single week of demand noise.</p>
+    <p>This is the whole idea behind <a href="https://github.com/DrobyshevDev/decisionrl">decisionrl</a>: not a bigger algorithm zoo, but a way to check whether an algorithm was worth reaching for at all.</p>
 
-    <p>So in <a href="https://github.com/DrobyshevDev/decisionrl">decisionrl</a> every applied environment ships with its classical operations-research baseline: base-stock for inventory, a threshold rule for the queue, a greedy policy for the battery. A policy is measured against it, not asserted to be good.</p>
+    <h2>The baseline is the method that already works</h2>
 
-    <p>An "indistinguishable" verdict is a result, not a failure. It means the agent recovered a solution that is already known, and paying for a neural network buys nothing. The interesting case is the other one — where the classical method breaks. Nonstationary demand, coupled price and order, a stockout penalty: there is no closed form, and RL starts to win for a reason you can name.</p>
+    <p>An inventory problem has a base solution: the base-stock policy. It is decades old, it fits in two lines, and on stationary demand it is provably optimal. If your RL loses to base-stock, you have built a complicated way to do worse than a calculator. If it wins by one percent, the gap drowns in a single week of demand noise.</p>
+
+    <p>So every applied environment in the library ships with its classical operations-research baseline: base-stock for inventory, a value threshold for the queue, a greedy policy for the battery, a per-echelon base-stock for the supply chain. A policy is measured against it, not asserted to be good.</p>
+
+    <h2>Two honest outcomes, kept apart</h2>
+
+    <p>Where a closed-form optimum exists, RL should <em>recover</em> it, not beat it. On stationary inventory the learned policy reaches <strong>194.5</strong> against the exact dynamic-programming optimum of <strong>196.1</strong> — indistinguishable, which is the correct result. Pricing lands at 25.3 against the best fixed rule's 25.5. Matching a known optimum is a pass: the agent found the answer on its own, and there is nothing to pay a network for.</p>
+
+    <p>Where the classical method breaks, RL earns its place. Make demand nonstationary — two regimes, a 5% chance of switching, holding and stockout costs that punish a wrong fixed level — and a single base-stock is no longer optimal. Over four seeds DQN holds 319–329 and beats the best fixed base-stock at roughly <strong>322 versus 257</strong>: about +25%.</p>
+
+    <blockquote>PPO is unstable on this task — one seed collapses to 130, another holds 308 — so the honest claim uses DQN, the algorithm that is stable across seeds, not the average of a lucky run.</blockquote>
+
+    <h2>Measured against real software, not a quote</h2>
+
+    <p>The comparison is against a real <a href="https://github.com/DLR-RM/stable-baselines3">Stable-Baselines3</a>, run on the same tasks, not a number lifted from a paper. PPO reaches parity on CartPole, 500/500. On the drifting-inventory task the library's DQN scores <strong>327 ± 122</strong> against SB3's <strong>96 ± 57</strong>.</p>
+
+    <p>Under the hood: 31 algorithms, 22 environments — nine of them operational — 400 tests, 86% coverage, typed and checked with mypy, CI on Python 3.9 through 3.12, published on PyPI as <code>decisionrl</code>. The numbers in the README are pinned by tests, because prose rots quietly and a failing test does not.</p>
+
+    <h2>When not to use RL</h2>
+
+    <p>If a closed form exists and demand is stationary, use it: the solver is faster, exact, and needs no training. RL is for the cases the solver cannot state — coupled decisions, nonstationarity, costs without a clean formula.</p>
 
     <p>The rule is short: compute the baseline first, then train the agent. With nothing to compare against, you do not know whether it works.</p>
   </article>

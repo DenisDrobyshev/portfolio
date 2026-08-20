@@ -31,7 +31,7 @@
     last = t;
 
     // fade the previous frame toward the background — leaves a soft trail
-    ctx.fillStyle = 'rgba(11,13,17,0.075)';
+    ctx.fillStyle = 'rgba(11,13,17,0.10)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.font = fontSize + 'px "JetBrains Mono", monospace';
@@ -39,8 +39,8 @@
       var ch = chars[(Math.random() * chars.length) | 0];
       var x = i * fontSize;
       var y = drops[i] * fontSize;
-      // leading glyph a touch brighter, the rest faint green
-      ctx.fillStyle = Math.random() > 0.975 ? 'rgba(140,240,175,0.45)' : 'rgba(80,210,130,0.22)';
+      // leading glyph slightly brighter, the rest barely-there green
+      ctx.fillStyle = Math.random() > 0.985 ? 'rgba(120,225,160,0.22)' : 'rgba(70,190,120,0.10)';
       ctx.fillText(ch, x, y);
       if (y > canvas.height && Math.random() > 0.97) drops[i] = 0;
       drops[i]++;
