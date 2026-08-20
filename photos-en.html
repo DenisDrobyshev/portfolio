@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Photos — Denis Drobyshev</title>
+<meta name="description" content="Photographs by Denis Drobyshev." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://denisdrobyshev.github.io/portfolio/photos-en.html" />
+<meta property="og:title" content="Photos — Denis Drobyshev" />
+<link rel="alternate" hreflang="en" href="https://denisdrobyshev.github.io/portfolio/photos-en.html" />
+<link rel="alternate" hreflang="ru" href="https://denisdrobyshev.github.io/portfolio/photos.html" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles-mt.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav container">
+    <a href="en.html">About</a>
+    <a href="notes-en.html">Notes</a>
+    <a href="photos-en.html">Photos</a>
+    <a href="https://github.com/DenisDrobyshev">GitHub</a>
+    <a href="photos.html">RU</a>
+  </nav>
+</header>
+
+<main class="site-main container">
+
+  <div class="page-header">
+    <h1>Photos</h1>
+    <p class="page-intro">A few frames away from the code. Click to open larger.</p>
+  </div>
+
+  <!--
+    Replace the placeholders with your own photos: drop files into assets/photos/ (e.g. moscow.jpg)
+    and change each .masonry-item src to "assets/photos/your-file.jpg" plus its .photo-caption.
+  -->
+  <div class="masonry-grid">
+    <div class="masonry-item"><img src="assets/photos/ph1.svg" alt="Photo" loading="lazy" /><div class="photo-caption">Replace with your photo</div></div>
+    <div class="masonry-item"><img src="assets/photos/ph2.svg" alt="Photo" loading="lazy" /><div class="photo-caption">Replace with your photo</div></div>
+    <div class="masonry-item"><img src="assets/photos/ph3.svg" alt="Photo" loading="lazy" /><div class="photo-caption">Replace with your photo</div></div>
+    <div class="masonry-item"><img src="assets/photos/ph4.svg" alt="Photo" loading="lazy" /><div class="photo-caption">Replace with your photo</div></div>
+    <div class="masonry-item"><img src="assets/photos/ph5.svg" alt="Photo" loading="lazy" /><div class="photo-caption">Replace with your photo</div></div>
+    <div class="masonry-item"><img src="assets/photos/ph6.svg" alt="Photo" loading="lazy" /><div class="photo-caption">Replace with your photo</div></div>
+  </div>
+
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>Moscow · remote or hybrid</span>
+    <span class="footer-links">
+      <a href="mailto:drobishev.denis@icloud.com">Email</a>
+      <a href="https://github.com/DenisDrobyshev">GitHub</a>
+      <a href="https://t.me/multiheadselfattention">Telegram</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lightboxImg');
+    document.querySelectorAll('.masonry-item img').forEach(function(img){
+      img.parentElement.addEventListener('click', function(){
+        lbImg.src = img.src; lbImg.alt = img.alt; lb.classList.add('active');
+      });
+    });
+    function close(){ lb.classList.remove('active'); lbImg.src = ''; }
+    document.getElementById('lightboxClose').addEventListener('click', close);
+    lb.addEventListener('click', function(e){ if(e.target === lb) close(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+  })();
+</script>
+
+</body>
+</html>

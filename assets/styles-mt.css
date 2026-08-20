@@ -95,3 +95,58 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.3;color:v
              padding:var(--sp-xl) 0;margin-top:var(--sp-3xl);color:var(--text-secondary);font-size:.875rem}
 .site-footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--sp-sm)}
 .site-footer .footer-links{display:flex;gap:var(--sp-md);font-family:var(--font-mono)}
+
+/* page header (notes / photos) */
+.page-header{margin-bottom:var(--sp-xl)}
+.page-header h1{font-size:2.2rem;font-weight:700;margin-bottom:var(--sp-sm)}
+.page-intro{font-size:1.1rem;color:var(--text-secondary);max-width:640px;line-height:1.7}
+
+/* notes list */
+.post-list{list-style:none;padding:0}
+.post-item{padding:var(--sp-lg) 0;border-bottom:1px solid var(--accent-border)}
+.post-item:last-child{border-bottom:none}
+.post-item-title{font-family:var(--font-heading);font-size:1.35rem;margin:0 0 var(--sp-xs)}
+.post-item-title a{color:var(--text-primary)}
+.post-item-title a:hover{color:var(--accent-link)}
+.post-item-meta{font-family:var(--font-mono);font-size:.8125rem;color:var(--text-muted)}
+.post-item-meta .reading-time::before{content:"·";margin:0 .5rem}
+.post-item-excerpt{margin-top:var(--sp-sm);color:var(--text-secondary)}
+.empty-note{color:var(--text-muted);font-style:italic;padding:var(--sp-lg) 0}
+
+/* single note */
+.back-link{display:inline-block;margin-bottom:var(--sp-lg);font-family:var(--font-mono);font-size:.85rem}
+.post-header .post-meta{font-family:var(--font-mono);font-size:.8125rem;color:var(--text-muted);margin-top:var(--sp-xs)}
+.post-content{max-width:720px}
+.post-content p{margin-bottom:var(--sp-md);color:var(--text-primary)}
+.post-content h2{font-family:var(--font-heading);font-size:1.5rem;margin:var(--sp-xl) 0 var(--sp-sm);border:none;padding:0;display:block}
+.post-content h3{font-size:1.2rem;margin:var(--sp-lg) 0 var(--sp-xs)}
+.post-content ul,.post-content ol{margin:0 0 var(--sp-md) 1.2rem;color:var(--text-primary)}
+.post-content li{margin-bottom:var(--sp-xs)}
+.post-content blockquote{border-left:3px solid var(--accent-border-highlight);padding-left:var(--sp-md);
+  margin:var(--sp-md) 0;color:var(--text-secondary);font-style:italic}
+.post-content pre{background:var(--bg-secondary);border:1px solid var(--accent-border);border-radius:8px;
+  padding:var(--sp-md);overflow-x:auto;margin-bottom:var(--sp-md);font-family:var(--font-mono);font-size:.85rem}
+.post-content img{border-radius:8px;margin:var(--sp-md) 0}
+
+/* photography */
+.masonry-grid{column-count:3;column-gap:var(--sp-md)}
+@media(max-width:1024px){.masonry-grid{column-count:2}}
+@media(max-width:640px){.masonry-grid{column-count:1}}
+.masonry-item{break-inside:avoid;margin-bottom:var(--sp-md);position:relative;overflow:hidden;
+  border-radius:8px;cursor:pointer;border:1px solid var(--accent-border)}
+.masonry-item img{width:100%;display:block;transition:transform var(--transition)}
+.masonry-item:hover img{transform:scale(1.03)}
+.masonry-item::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.55),transparent 55%);opacity:0;transition:opacity var(--transition)}
+.masonry-item:hover::after{opacity:1}
+.photo-caption{position:absolute;bottom:0;left:0;right:0;padding:var(--sp-md);color:#fff;font-size:.85rem;
+  opacity:0;transform:translateY(8px);transition:all var(--transition);z-index:1}
+.masonry-item:hover .photo-caption{opacity:1;transform:translateY(0)}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);display:flex;align-items:center;justify-content:center;
+  z-index:1000;opacity:0;visibility:hidden;transition:opacity var(--transition)}
+.lightbox.active{opacity:1;visibility:visible}
+.lightbox img{max-width:92vw;max-height:92vh;object-fit:contain;border-radius:6px}
+.lightbox-close{position:absolute;top:var(--sp-lg);right:var(--sp-lg);width:40px;height:40px;
+  background:var(--bg-secondary);border:1px solid var(--accent-border);border-radius:50%;color:var(--text-primary);
+  font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lightbox-close:hover{background:var(--text-primary);color:var(--bg-primary)}
