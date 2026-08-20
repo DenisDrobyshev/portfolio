@@ -1,10 +1,10 @@
 :root{
-  --bg-primary:#0d1117; --bg-secondary:#161b22; --bg-tertiary:#21262d;
-  --text-primary:#e6edf3; --text-secondary:#a1a8b0; --text-muted:#6e7681;
-  --accent-primary:#4ecdc4; --accent-link:#4ecdc4; --accent-link-hover:#a8edea;
-  --accent-border:#30363d; --accent-border-highlight:#4ecdc4;
-  --accent-green:#7ee787; --accent-orange:#ffa657; --accent-purple:#d2a8ff;
-  --font-heading:'Newsreader',Georgia,serif;
+  --bg-primary:#0b0d11; --bg-secondary:#14181f; --bg-tertiary:#1b2028;
+  --text-primary:#e9ebef; --text-secondary:#9aa1ad; --text-muted:#6a7280;
+  --accent-primary:#8b7cf0; --accent-link:#9b8cf5; --accent-link-hover:#b6a9ff;
+  --accent-border:#282e37; --accent-border-highlight:#8b7cf0;
+  --accent-green:#e0a458; --accent-orange:#ffa657; --accent-purple:#d2a8ff;
+  --font-heading:'Space Grotesk',system-ui,-apple-system,sans-serif;
   --font-body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
   --font-mono:'JetBrains Mono','Fira Code',monospace;
   --sp-xs:.25rem; --sp-sm:.5rem; --sp-md:1rem; --sp-lg:1.5rem; --sp-xl:2rem; --sp-2xl:3rem; --sp-3xl:4rem;
