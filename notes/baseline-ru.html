@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Baseline вместо лидерборда — Денис Дробышев</title>
+<meta name="description" content="Почему политику для операционной задачи меряют против классического baseline, а не против другого агента на лидерборде." />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/styles-mt.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav container">
+    <a href="../ru.html">Обо мне</a>
+    <a class="active" href="../notes-ru.html">Заметки</a>
+    <a href="../photos-ru.html">Фото</a>
+    <a href="https://github.com/DenisDrobyshev">GitHub</a>
+  </nav>
+</header>
+
+<main class="site-main container">
+
+  <a class="back-link" href="../notes-ru.html">← Все заметки</a>
+
+  <div class="post-header">
+    <h1>Baseline вместо лидерборда</h1>
+    <div class="post-meta">20 августа 2026 · 2 мин чтения</div>
+  </div>
+
+  <article class="post-content">
+    <p>RL-агента почти всегда с чем-то сравнивают. Обычно — с другим агентом на лидерборде: PPO против SAC, +12% на Atari. Для исследования это нормально. Для операционной задачи — почти бесполезно.</p>
+
+    <p>У задачи о запасах уже есть базовое решение: base-stock policy. Ей десятки лет, она считается в две строки, и на стационарном спросе она оптимальна. Если ваш RL проигрывает base-stock — вы построили сложный способ работать хуже калькулятора. Если выигрывает на один процент — разрыв утонет в шуме спроса за первую же неделю.</p>
+
+    <p>Поэтому в <a href="https://github.com/DrobyshevDev/decisionrl">decisionrl</a> каждая прикладная среда идёт со своим классическим baseline из исследования операций: base-stock для склада, пороговое правило для очереди, жадная стратегия для батареи. Политику меряют против него, а не объявляют хорошей.</p>
+
+    <p>Вердикт «неразличимо» — это результат, а не неудача. Он значит: агент восстановил уже известное решение, и платить за нейросеть незачем. Интереснее другой случай — когда классика ломается. Нестационарный спрос, связанные цена и заказ, штраф за дефицит: closed-form решения нет, и RL начинает выигрывать по делу.</p>
+
+    <p>Правило короткое: сначала посчитайте baseline, потом обучайте агента. Если не с чем сравнивать — вы не знаете, работает ли он.</p>
+  </article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>© 2026 Денис Дробышев</span>
+    <span class="footer-links">
+      <a href="mailto:drobishev.denis@icloud.com">Email</a>
+      <a href="https://github.com/DenisDrobyshev">GitHub</a>
+      <a href="https://t.me/multiheadselfattention">Telegram</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

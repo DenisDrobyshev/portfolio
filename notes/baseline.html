@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A baseline, not a leaderboard — Denis Drobyshev</title>
+<meta name="description" content="Why a policy for an operational problem is measured against its classical baseline, not against another agent on a leaderboard." />
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/styles-mt.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav container">
+    <a href="../index.html">About</a>
+    <a class="active" href="../notes.html">Notes</a>
+    <a href="../photos.html">Photos</a>
+    <a href="https://github.com/DenisDrobyshev">GitHub</a>
+  </nav>
+</header>
+
+<main class="site-main container">
+
+  <a class="back-link" href="../notes.html">← All notes</a>
+
+  <div class="post-header">
+    <h1>A baseline, not a leaderboard</h1>
+    <div class="post-meta">20 August 2026 · 2 min read</div>
+  </div>
+
+  <article class="post-content">
+    <p>An RL agent is almost always compared to something. Usually to another agent on a leaderboard: PPO against SAC, +12% on Atari. For research that is fine. For an operational problem it is almost useless.</p>
+
+    <p>An inventory problem already has a base solution: the base-stock policy. It is decades old, it fits in two lines, and on stationary demand it is optimal. If your RL loses to base-stock, you have built a complicated way to do worse than a calculator. If it wins by one percent, the gap drowns in a single week of demand noise.</p>
+
+    <p>So in <a href="https://github.com/DrobyshevDev/decisionrl">decisionrl</a> every applied environment ships with its classical operations-research baseline: base-stock for inventory, a threshold rule for the queue, a greedy policy for the battery. A policy is measured against it, not asserted to be good.</p>
+
+    <p>An "indistinguishable" verdict is a result, not a failure. It means the agent recovered a solution that is already known, and paying for a neural network buys nothing. The interesting case is the other one — where the classical method breaks. Nonstationary demand, coupled price and order, a stockout penalty: there is no closed form, and RL starts to win for a reason you can name.</p>
+
+    <p>The rule is short: compute the baseline first, then train the agent. With nothing to compare against, you do not know whether it works.</p>
+  </article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>© 2026 Denis Drobyshev</span>
+    <span class="footer-links">
+      <a href="mailto:drobishev.denis@icloud.com">Email</a>
+      <a href="https://github.com/DenisDrobyshev">GitHub</a>
+      <a href="https://t.me/multiheadselfattention">Telegram</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
