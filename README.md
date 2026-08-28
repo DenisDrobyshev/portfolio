@@ -8,7 +8,7 @@
 проекты, технологический стек, опыт и контакты.
 
 [![Открыть сайт](https://img.shields.io/badge/Открыть_сайт-6366f1?style=for-the-badge&logo=githubpages&logoColor=white)](https://denisdrobyshev.github.io/portfolio/)
-[![RU](https://img.shields.io/badge/RU-версия-2563a8?style=for-the-badge)](https://denisdrobyshev.github.io/portfolio/index.html)
+[![RU](https://img.shields.io/badge/RU-версия-2563a8?style=for-the-badge)][(https://denisdrobyshev.github.io/portfolio/ru.html)]
 [![EN](https://img.shields.io/badge/EN-version-2563a8?style=for-the-badge)](https://denisdrobyshev.github.io/portfolio/en.html)
 
 </div>
