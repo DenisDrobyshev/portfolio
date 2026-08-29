@@ -1,0 +1,30 @@
+name: Update publications
+
+on:
+  schedule:
+    - cron: "23 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-publications
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/update_publications.py
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then echo "nothing to commit"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add publications.html publications-ru.html
+          git commit -m "Refresh the publication list from Zenodo"
+          git push
