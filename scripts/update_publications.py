@@ -48,7 +48,7 @@ def fetch() -> list[dict]:
     request = urllib.request.Request(f"{API}?{query}")
     request.add_header("Accept", "application/json")
     request.add_header("User-Agent", "denisdrobyshev.github.io publications")
-    with urllib.request.urlopen(request, timeout=30) as response:
+    with urllib.request.urlopen(request, timeout=60) as response:
         payload = json.load(response)
 
     records = []
