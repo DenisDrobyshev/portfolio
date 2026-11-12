@@ -237,3 +237,61 @@ h1,h2,h3{font-family:var(--font-heading);font-weight:600;line-height:1.3;color:v
   .pub-doi{display:none}
   .pub-profiles{flex:1 1 100%;flex-direction:row;gap:var(--sp-lg)}
 }
+
+/* notes */
+.note-lead{position:relative;margin:0 0 var(--sp-3xl);padding:var(--sp-xl) var(--sp-xl) var(--sp-lg);
+  background:rgba(22,27,36,.82);border:1px solid var(--accent-border);border-radius:10px;overflow:hidden}
+@supports (backdrop-filter:blur(4px)){.note-lead{backdrop-filter:blur(4px)}}
+.note-lead::before{content:"\201C";position:absolute;top:-.9rem;right:1.25rem;font-family:var(--font-heading);
+  font-size:9rem;line-height:1;color:var(--accent-primary);opacity:.18;pointer-events:none}
+.note-lead-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .9rem;font-family:var(--font-mono);
+  font-size:.75rem;color:var(--text-muted)}
+.note-badge{color:#0b0d11;background:var(--accent-primary);border-radius:4px;padding:.1rem .5rem;
+  font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:.6875rem}
+.note-lead-quote{position:relative;margin:var(--sp-lg) 0 var(--sp-lg);max-width:30ch;font-family:var(--font-heading);
+  font-size:clamp(1.55rem,4.2vw,2.15rem);font-weight:500;line-height:1.25;color:var(--text-primary);text-wrap:balance}
+.note-lead-title{font-family:var(--font-body);font-size:1rem;font-weight:500;padding-top:var(--sp-md);
+  border-top:1px solid var(--accent-border)}
+.note-lead-title a{color:var(--accent-link);display:inline-flex;align-items:baseline;gap:.5rem}
+.note-lead-title a::after{content:"";position:absolute;inset:0}
+.note-arrow{transition:transform var(--transition)}
+.note-lead:hover{border-color:#353c48}
+.note-lead:hover .note-arrow{transform:translateX(4px)}
+.note-lead:hover .note-lead-title a{color:var(--accent-link-hover)}
+
+.note-list{list-style:none;padding:0;position:relative}
+.note-list::before{content:"";position:absolute;left:5.5rem;top:.5rem;bottom:.5rem;width:1px;background:var(--accent-border)}
+.note{position:relative;display:grid;grid-template-columns:5.5rem minmax(0,1fr);border-radius:8px;
+  transition:background var(--transition)}
+.note+.note{margin-top:.25rem}
+.note:hover{background:rgba(22,27,36,.82)}
+.note-date{display:flex;flex-direction:column;align-items:flex-end;padding:var(--sp-md) var(--sp-md) 0 0;
+  font-family:var(--font-mono);color:var(--text-muted);line-height:1.2}
+.note-day{font-family:var(--font-heading);font-size:1.6rem;font-weight:600;color:var(--text-secondary);
+  font-variant-numeric:tabular-nums}
+.note-month{font-size:.6875rem;letter-spacing:.04em;text-transform:uppercase;margin-top:.15rem}
+.note-body{padding:var(--sp-md) var(--sp-md) var(--sp-md) var(--sp-lg)}
+.note::before{content:"";position:absolute;left:calc(5.5rem - 3.5px);top:1.55rem;z-index:1;width:7px;height:7px;border-radius:50%;
+  background:var(--bg-primary);border:1px solid var(--text-muted);transition:all var(--transition)}
+.note:hover::before{background:var(--accent-primary);border-color:var(--accent-primary)}
+.note-title{font-family:var(--font-heading);font-size:1.25rem;font-weight:600;line-height:1.3}
+.note-title a{color:var(--text-primary)}
+.note-title a::after{content:"";position:absolute;inset:0;border-radius:8px}
+.note:hover .note-title a{color:var(--accent-link-hover)}
+.note-title a:focus-visible,.note-lead-title a:focus-visible{outline:none}
+.note:focus-within,.note-lead:focus-within{outline:2px solid var(--accent-link);outline-offset:2px}
+.note-quote{margin-top:.3rem;color:var(--text-secondary);font-size:.98rem;line-height:1.55;max-width:58ch}
+.note-time{display:inline-block;margin-top:.4rem;font-family:var(--font-mono);font-size:.71875rem;color:var(--text-muted)}
+
+@media(max-width:640px){
+  .note-lead{padding:var(--sp-lg) var(--sp-md) var(--sp-md);margin-bottom:var(--sp-2xl)}
+  .note-lead::before{font-size:6.5rem;right:.75rem}
+  .note-list::before{left:3.6rem}
+  .note::before{left:calc(3.6rem - 3.5px)}
+  .note{grid-template-columns:3.6rem minmax(0,1fr)}
+  .note-date{padding:var(--sp-md) .7rem 0 0}
+  .note-day{font-size:1.3rem}
+  .note-month{font-size:.625rem;text-align:right}
+  .note-body{padding:var(--sp-md) .5rem var(--sp-md) var(--sp-md)}
+  .note-title{font-size:1.1rem}
+}
