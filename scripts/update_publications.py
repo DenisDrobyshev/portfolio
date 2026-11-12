@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Refresh publications.html and publications-ru.html from Zenodo.
 
-Queries Zenodo for records authored by AUTHOR, keeps only the ones where that
-name really appears among the creators, and rewrites the block delimited by
+Queries Zenodo for records by the author, keeps only the ones where a creator
+carries ORCID (or, failing that, a name starting with NAME), and rewrites the block delimited by
 PUBLICATIONS:START / PUBLICATIONS:END. Run daily by
 .github/workflows/update-publications.yml.
 """
@@ -13,12 +13,16 @@ import html
 import json
 import re
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime
 from pathlib import Path
 
-AUTHOR = "Drobyshev, Denis O."
+ORCID = "0009-0000-0976-1197"
+NAME = "Drobyshev, Denis"  # matches "Drobyshev, Denis" and "Drobyshev, Denis O."
+PAGE = 25  # anonymous API rejects bigger pages
 API = "https://zenodo.org/api/records"
 START = "<!-- PUBLICATIONS:START -->"
 END = "<!-- PUBLICATIONS:END -->"
@@ -43,20 +47,52 @@ def strip_html(raw: str, limit: int = 230) -> str:
     return cut.rstrip(" ,.;:") + "…"
 
 
-def fetch() -> list[dict]:
-    query = urllib.parse.urlencode({"q": f'"{AUTHOR}"', "size": 25, "sort": "newest"})
-    request = urllib.request.Request(f"{API}?{query}")
+def get(url: str) -> dict:
+    request = urllib.request.Request(url)
     request.add_header("Accept", "application/json")
     request.add_header("User-Agent", "denisdrobyshev.github.io publications")
-    with urllib.request.urlopen(request, timeout=60) as response:
-        payload = json.load(response)
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                return json.load(response)
+        except urllib.error.HTTPError as error:
+            if error.code < 500 or attempt == 3:
+                raise
+        except urllib.error.URLError:
+            if attempt == 3:
+                raise
+        time.sleep(10 * (attempt + 1))
+    raise RuntimeError("unreachable")
+
+
+def is_mine(creator: dict) -> bool:
+    if creator.get("orcid"):
+        return creator["orcid"] == ORCID
+    return creator.get("name", "").startswith(NAME)
+
+
+def fetch() -> list[dict]:
+    hits, page = [], 1
+    while True:
+        query = urllib.parse.urlencode(
+            {"q": f'"{NAME}"', "size": PAGE, "page": page, "sort": "newest"})
+        payload = get(f"{API}?{query}")
+        batch = payload.get("hits", {}).get("hits", [])
+        hits.extend(batch)
+        if len(batch) < PAGE or page >= 20:
+            break
+        page += 1
 
     records = []
-    for hit in payload.get("hits", {}).get("hits", []):
-        meta = hit.get("metadata", {})
-        creators = [c.get("name", "") for c in meta.get("creators", [])]
-        if AUTHOR not in creators:  # free-text search can match other people
+    seen = set()
+    for hit in hits:
+        if hit.get("id") in seen:
             continue
+        seen.add(hit.get("id"))
+        meta = hit.get("metadata", {})
+        if not any(is_mine(c) for c in meta.get("creators", [])):
+            continue  # free-text search can match other people
+        creators = [c.get("name", "") for c in meta.get("creators", [])]
         try:
             published = datetime.strptime(meta["publication_date"], "%Y-%m-%d")
         except (KeyError, ValueError):
