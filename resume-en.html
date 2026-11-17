@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>CV — Denis Drobyshev</title>
-<meta name="description" content="CV: Denis Drobyshev, fullstack developer — Python, Django, FastAPI, React." />
+<meta name="description" content="CV: Denis Drobyshev, data science and machine learning intern. Python, scikit-learn, PyTorch, SQL." />
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 <link rel="stylesheet" href="assets/styles.css" />
 </head>
@@ -15,34 +15,103 @@
 
   <div class="cv-head">
     <h1>Denis Drobyshev</h1>
-    <div class="role">Fullstack developer · Python, Django, FastAPI, React · ML / Computer Vision</div>
+    <div class="role">Data science and machine learning intern</div>
     <div class="links">
       <a href="mailto:drobishev.denis@icloud.com">drobishev.denis@icloud.com</a><span class="sep">·</span>
       <a href="https://t.me/multiheadselfattention">Telegram</a><span class="sep">·</span>
       <a href="https://github.com/DenisDrobyshev">github.com/DenisDrobyshev</a><span class="sep">·</span>
       <a href="https://github.com/DrobyshevDev">DrobyshevDev</a><span class="sep">·</span>
-      <span class="rest">My hobby is cycling, fishing and reading interesting books</span>
+      <span class="rest">Moscow</span>
     </div>
   </div>
 
   <h2>About</h2>
   <p class="rest">
-    I develop full-stack solutions mainly in Python: Django and FastAPI, PostgreSQL, Docker. Besides web
-    development I have built ML and computer-vision solutions — detection on a video stream (YOLO),
-    image classifiers, geoanalytics on open data. I try to release open source code: projects with
-    tagged releases and packages on PyPI, typed and covered with tests in CI.
+    I work on machine learning and data analysis in Python. In 2026 I graduated from MIIGAiK with a bachelor's
+    degree in applied informatics, and during my studies I completed a retraining programme as a big data
+    specialist. My projects are on GitHub, and four of my libraries are published on PyPI. I am looking for a
+    data science internship.
   </p>
 
   <h2>Skills</h2>
   <dl class="skills">
-    <dt>Languages</dt>      <dd>Python, JavaScript, TypeScript, SQL, Java, Dart</dd>
-    <dt>Backend</dt>        <dd>Django, FastAPI, REST, authentication, SSO (OpenID Connect), WebSocket</dd>
-    <dt>Databases</dt>      <dd>PostgreSQL, SQLite, ORM, schema design</dd>
-    <dt>Infrastructure</dt> <dd>Docker, docker-compose, Nginx, Gunicorn, Linux, Git, GitHub Actions, PowerShell, Bash, Active Directory</dd>
-    <dt>ML and CV</dt>      <dd>PyTorch, TensorFlow, scikit-learn, OpenCV, YOLO, pandas, NumPy</dd>
-    <dt>Frontend</dt>       <dd>React, Vue / Nuxt, HTML, CSS, Streamlit</dd>
-    <dt>Other</dt>          <dd>testing (unit, integration, functional), web security basics (CSRF, XSS, SQL injection)</dd>
+    <dt>Python and SQL</dt>        <dd>pandas, NumPy, matplotlib, SQL</dd>
+    <dt>Machine learning</dt>      <dd>scikit-learn, gradient boosting, PyTorch</dd>
+    <dt>Statistics</dt>            <dd>hypothesis testing, bootstrap, cross-validation</dd>
+    <dt>NLP and CV</dt>            <dd>embeddings, RAG, transformers, U-Net</dd>
+    <dt>Tools</dt>                 <dd>Git, Docker, PostgreSQL, FastAPI, Linux</dd>
+    <dt>Languages</dt>             <dd>Russian (native), English A2–B1 (I read documentation and papers)</dd>
   </dl>
+
+  <h2>Projects</h2>
+
+  <div class="job">
+    <div class="top">
+      <span class="what"><a href="https://github.com/DenisDrobyshev/situs">situs</a></span>
+    </div>
+    <div class="where">Choosing a business location from OpenStreetMap data</div>
+    <ul>
+      <li>Trained a gradient boosting model with a Poisson loss on 4,784 hexagons of Kaluga and 10 OpenStreetMap data layers.</li>
+      <li>Evaluated it with spatial cross-validation: the 10% of cells with the highest prediction contained 98% of the city's pharmacies. Found and removed target leakage.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="top">
+      <span class="what"><a href="https://github.com/DrobyshevDev/decisionrl">decisionrl</a></span>
+    </div>
+    <div class="where">Reinforcement learning library, published on <a href="https://pypi.org/project/decisionrl/">PyPI</a></div>
+    <ul>
+      <li>Implemented 32 algorithms and environments for pricing, inventory, queueing and supply-chain problems.</li>
+      <li>On 5 of 7 tasks the trained policy beat the classical operations-research method, and on the rest it performed on par (interquartile mean, 95% bootstrap interval, 5 runs).</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="top">
+      <span class="what"><a href="https://github.com/DrobyshevDev/praxis">praxis</a></span>
+    </div>
+    <div class="where">Legal assistant for Russian law with citation checking</div>
+    <ul>
+      <li>Built hybrid search over six codes of law (BM25 and dense search with BGE-M3), with reranking and an NLI model that checks every citation.</li>
+      <li>On the Civil Code (4,717 provisions) it reaches recall@5 = 0.92 and MRR = 0.94 on a test set of 18 questions. The service runs on FastAPI.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="top">
+      <span class="what"><a href="https://github.com/DenisDrobyshev/swath">swath</a></span>
+    </div>
+    <div class="where">Semantic segmentation of aerial and satellite imagery</div>
+    <ul>
+      <li>Trained a U-Net without pretrained weights on the LoveDA dataset: mIoU = 0.438 on 1,669 validation images (urban 0.471, rural 0.379).</li>
+      <li>Built a FastAPI web service that returns a georeferenced segmentation mask (GeoTIFF, GeoJSON).</li>
+    </ul>
+  </div>
+
+  <h2>Professional retraining</h2>
+
+  <div class="job">
+    <div class="top">
+      <span class="what">Development of geoinformation solutions using artificial intelligence methods</span>
+      <span class="when">Dec 2024 — Dec 2025</span>
+    </div>
+    <div class="where">MIIGAiK Digital Department, qualification "Big Data Specialist"</div>
+    <ul>
+      <li>Collected and prepared datasets, engineered features, tuned hyperparameters and evaluated models with cross-validation.</li>
+      <li>Used linear models, decision trees, SVM, kNN, clustering, dimensionality reduction, ensembles and boosting.</li>
+      <li>Trained neural networks in Keras: convolutional networks, transfer learning, autoencoders, GANs, YOLO object detection.</li>
+      <li>Worked with spatial data (GeoPandas, Rasterio, OSMnx, Google Earth Engine) and integrated models into QGIS and Streamlit.</li>
+      <li>Final project (<a href="https://github.com/DenisDrobyshev/Geomarketing_analysis">Geomarketing_analysis</a>): choosing a location for a fitness centre from OpenStreetMap data, 33 features on an H3 grid, RandomForest and GradientBoosting models, an interactive map.</li>
+    </ul>
+  </div>
+
+  <h2>Libraries on PyPI</h2>
+  <ul class="rest" style="padding-left:1.05rem">
+    <li><a href="https://github.com/DrobyshevDev/mlango">mlango</a>: a framework for ML projects. Compares model versions and tests whether the difference is significant with an exact McNemar test.</li>
+    <li><a href="https://github.com/DrobyshevDev/glia">glia</a>: a library for building LLM agents. 167 tests, code coverage of at least 90%.</li>
+    <li><a href="https://github.com/DrobyshevDev/stadion">stadion</a>: a benchmark for agents on operational problems. Compares an agent with the classical method and the exact optimum; the gap between those two ranges from 0.4% to 26.6% across six tasks.</li>
+  </ul>
 
   <h2>Experience</h2>
 
@@ -51,12 +120,11 @@
       <span class="what">Developer / DevOps</span>
       <span class="when">2026</span>
     </div>
-    <div class="where">IT Department, MIIGAiK · systems development and support group · production internship</div>
+    <div class="where">MIIGAiK IT department (thesis project)</div>
     <ul>
-      <li>Deployed a Django portal on the university's internal infrastructure: PostgreSQL, Gunicorn behind Nginx, static and media file serving.</li>
-      <li>Set up single sign-on with the university corporate account over OpenID Connect.</li>
-      <li>Moved the project from dev to production: pulled secrets out of the code, turned off debug, restricted allowed hosts, configured system email.</li>
-      <li>Loaded real journal issues into the archive and verified metadata export to XML.</li>
+      <li>Designed the database and backend of an academic journal portal and put it into production (Django, PostgreSQL, Docker).</li>
+      <li>Set up sign-in through the corporate SSO and XML metadata export for bibliographic databases.</li>
+      <li>Worked in the development team, agreeing technical decisions with colleagues and IT department staff.</li>
     </ul>
   </div>
 
@@ -65,158 +133,56 @@
       <span class="what">IT support technician</span>
       <span class="when">Dec 2024 — Jan 2026</span>
     </div>
-    <div class="where">Informatisation Office, IT Department, MIIGAiK · 1 year 2 months</div>
+    <div class="where">MIIGAiK IT department</div>
     <ul>
-      <li>Administered Windows and Linux workstations and servers in an Active Directory domain.</li>
-      <li>Wrote PowerShell and Bash automation scripts for routine support tasks.</li>
-      <li>Kept the hardware running: diagnostics, repair, component replacement, software and driver setup.</li>
-      <li>Set up workplaces, ran scheduled equipment checks, and advised users on IT questions.</li>
-      <li>Supported events with equipment: desktops, laptops, projectors, interactive panels, printers, LED screens.</li>
+      <li>Administered computers in an Active Directory domain with SCCM and wrote automation scripts in PowerShell and Bash.</li>
+      <li>Repaired and configured computer equipment.</li>
+      <li>Helped users and, together with the support team, provided technical support for university events.</li>
     </ul>
   </div>
 
   <div class="job">
     <div class="top">
-      <span class="what">Backend / web developer</span>
-      <span class="when">2023 — 2024</span>
+      <span class="what">Production internship</span>
+      <span class="when">2022 — 2024</span>
     </div>
-    <div class="where">Internal university systems, MIIGAiK · practical work during my studies</div>
+    <div class="where">MIIGAiK internal information systems</div>
     <ul>
-      <li>Built a class schedule web service: wrote a large SQL query that assembled the timetable from several related tables, and integrated it into the university's internal Go services.</li>
-      <li>Developed the student personal account portal: schedule, grade book, profile and news, with a responsive interface (miigaik-lk).</li>
-      <li>Worked inside an existing infrastructure: read other people's code, kept to shared conventions, and got changes to a working state.</li>
+      <li>Developed the interface of the student personal account and the core business logic of the university's internal systems.</li>
+      <li>Wrote an SQL query that assembles the timetable from several related tables, for the university's Go services.</li>
     </ul>
-  </div>
-
-  <h2>Open source</h2>
-  <p class="rest">
-    Libraries in the <a href="https://github.com/DrobyshevDev">DrobyshevDev</a> organisation:
-    typed, tested in CI, published under tagged releases.
-  </p>
-
-  <div class="entry">
-    <div><span class="chip">PyPI</span></div>
-    <div>
-      <h3>decisionrl</h3>
-      <p>Reinforcement learning for operational decisions: pricing, inventory, energy, queues, supply chains. Every applied environment ships with its classical operations-research baseline. 31 algorithms, 22 environments, 12 gradient-free optimizers, 400 tests, 86% coverage, CI on Python 3.9–3.12.</p>
-      <div class="stack">Python · PyTorch · NumPy · Gymnasium</div>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div><span class="chip">PyPI</span></div>
-    <div>
-      <h3>stadion</h3>
-      <p>A proving ground for operational decisions: agents are scored against the tuned classical method and the exact optimum, with a confidence interval. Exact solutions through dynamic programming.</p>
-      <div class="stack">Python · PyTorch · dynamic programming</div>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div><span class="chip">PyPI</span></div>
-    <div>
-      <h3>mlango</h3>
-      <p>A framework for ML, analytics and LLM agents on Django's philosophy: you declare datasets, models and evaluations, the framework runs, versions and records them.</p>
-      <div class="stack">Python · MkDocs · GitHub Actions</div>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div><span class="chip">release</span></div>
-    <div>
-      <h3>glia · praxis · lemma</h3>
-      <p>glia — a glass-box library for LLM agents with a zero-dependency core. praxis — a legal assistant for Russian law with verified citations: hybrid retrieval, an NLI citation verifier, GraphRAG. lemma — a free course on ML, DL and RL, 27 modules, notebooks checked in CI.</p>
-      <div class="stack">Python · FastAPI · RAG · MkDocs</div>
-    </div>
-  </div>
-
-  <h2>Projects</h2>
-
-  <div class="entry">
-    <div><span class="chip">thesis</span></div>
-    <div>
-      <h3>Academic journal portal</h3>
-      <p>Portal for <i>Izvestia Vuzov. Geodesy and Aerophotography</i> with issue archive management. Designed the database and the server side, built the whole portal, and deployed it on a university server. Admin panel for the editorial team, with a rule that only one issue can be current at a time. Corporate SSO login, role-based access, common web vulnerabilities closed (CSRF, XSS, SQL injection). Metadata export to XML for bibliographic databases, tests at several levels.</p>
-      <div class="stack">Python · Django · PostgreSQL · Docker · Nginx · Gunicorn · OpenID Connect</div>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div><span class="chip">5 modules</span></div>
-    <div>
-      <h3>ARC</h3>
-      <p>An ecosystem of five modules on a shared core: fitness, library, messenger, social network, dating. JWT auth, a realtime messenger over WebSocket, media in S3, subscriptions and referrals, CI and deployment.</p>
-      <div class="stack">Python · FastAPI · PostgreSQL · WebSocket · S3 · Docker</div>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div><span class="chip">backend</span></div>
-    <div>
-      <h3>approval-service</h3>
-      <p>A content approval service: a state machine, an audit log on every transition, a transactional outbox, Idempotency-Key support, per-workspace multi-tenant isolation, secrets redacted in logs. 39 tests.</p>
-      <div class="stack">Python · FastAPI · async SQLAlchemy 2.0 · Alembic · PostgreSQL · pytest</div>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div><span class="chip">CV</span></div>
-    <div>
-      <h3>Detector_app</h3>
-      <p>A Streamlit app that finds events in the frame in real time: YOLO for detection, InsightFace for face recognition. Works with a webcam and video files, produces CSV reports and statistics.</p>
-      <div class="stack">Python · YOLO · InsightFace · OpenCV · Streamlit</div>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div><span class="chip">ML</span></div>
-    <div>
-      <h3>Geomarketing_analysis · classification_animals</h3>
-      <p>A pipeline that suggests where to open a fitness centre: OpenStreetMap data, an H3 hex grid, an attractiveness model in scikit-learn, interactive maps. Image classifier: three architectures compared, best F1 0.88, inference served through FastAPI.</p>
-      <div class="stack">Python · scikit-learn · H3 · OSMnx · TensorFlow/Keras · FastAPI</div>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div><span class="chip">backend</span></div>
-    <div>
-      <h3>excel-to-db-converter</h3>
-      <p>Turns Excel files into database tables: authentication, configurable templates, validation by type and rules, and a web interface for edits.</p>
-      <div class="stack">Python · FastAPI · Uvicorn · SQLite</div>
-    </div>
   </div>
 
   <h2>Education</h2>
 
   <div class="job">
     <div class="top">
-      <span class="what">B.Sc., Applied Informatics (09.03.03)</span>
-      <span class="when">2022 — 2026</span>
+      <span class="what">Master's programme, applied informatics</span>
+      <span class="when">since 2026</span>
     </div>
-    <div class="where">MIIGAiK — Moscow State University of Geodesy and Cartography, Department of Geoinformatics and Information Security</div>
+    <div class="where">MIIGAiK, programme "End-to-end digital technologies in real estate management"</div>
   </div>
 
   <div class="job">
     <div class="top">
-      <span class="what">Geoinformation solutions with AI methods</span>
-      <span class="when">Dec 2024 — Dec 2025</span>
+      <span class="what">Bachelor's degree, applied informatics (09.03.03)</span>
+      <span class="when">2022 — 2026</span>
     </div>
-    <div class="where">MIIGAiK Digital Department · qualification "Big Data Specialist"</div>
-    <ul>
-      <li>Machine learning in Python: data handling (NumPy, pandas), visualisation, feature engineering, quality metrics, cross-validation, hyperparameter search.</li>
-      <li>ML algorithms: kNN, regressions, decision trees, SVM, naive Bayes, clustering, dimensionality reduction, ensembles and boosting.</li>
-      <li>Deep learning: Keras, CNNs, transfer learning, regularisation, autoencoders, GANs, YOLO for detection.</li>
-      <li>GeoAI: GeoPandas, Rasterio, Xarray, collection through APIs (requests, OSMnx), Leafmap, Google Earth Engine, integrating models into QGIS.</li>
-    </ul>
+    <div class="where">MIIGAiK, Department of Geoinformatics and Information Security. GPA 4.5 out of 5. Thesis: an academic journal portal (Django, PostgreSQL).</div>
   </div>
 
-  <h2>Additional</h2>
+  <h2>Achievements</h2>
   <ul class="rest" style="padding-left:1.05rem">
-    <li>English: I read documentation and technical material comfortably.</li>
-    <li>My hobby is cycling, fishing and reading interesting books</li>
+    <li>Author of <a href="https://github.com/DrobyshevDev/lemma">lemma</a>, a free 27-module course on ML, DL and RL.</li>
+    <li>Fixes accepted into <a href="https://github.com/Farama-Foundation/Gymnasium/pull/1669">Gymnasium</a> and <a href="https://github.com/Farama-Foundation/Shimmy/pull/157">Shimmy</a> (Farama Foundation).</li>
   </ul>
 
-  <p class="backlink" style="margin-top:2.5rem"><a href="en.html">← back to the site</a></p>
+  <h2>Other</h2>
+  <ul class="rest" style="padding-left:1.05rem">
+    <li>I enjoy cycling trips and fishing, and I read books.</li>
+  </ul>
+
+  <p class="backlink" style="margin-top:2.5rem"><a href="index.html">← home</a></p>
 
 </div>
 </body>
